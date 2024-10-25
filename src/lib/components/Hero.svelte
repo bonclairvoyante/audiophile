@@ -26,7 +26,7 @@
 	<div class="section-inner-container w-full h-full max-w-[111rem] p-10">
 		<div class="img-container w-full m-auto relative">
 			<img
-				src="/src/lib/assets/home/{localSize}/image-header.jpg"
+				src="/src/lib/assets/home/mobile/image-header.jpg"
 				alt=""
 				class="lg:max-w-none lg:w-[80rem] lg:absolute bottom-[-400px] lg:hidden"
 			/>
