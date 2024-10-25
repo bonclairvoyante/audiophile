@@ -1,102 +1,104 @@
-
-
 <script lang="ts">
 	import Button1 from './Button1.svelte';
-
-	let innerHeight: number;
-	let localSize: string;
-
-	$: if (innerHeight >= 1024) {
-		localSize = 'desktop';
-	} else if (innerHeight >= 768) {
-		localSize = 'tablet';
-	} else {
-		localSize = 'mobile';
-	}
-
-	//Consider adding the 'products' store in order to grab data from the object to fill this page about the mark-two headphones
 </script>
 
-<svelte:window bind:innerWidth={innerHeight} />
-
-<section
-	id="homepage-hero-section"
-	class="w-full h-[51rem] mTab:h-[72.9rem] bg-[#191919] lg:h-[63.2rem] overflow-hidden font-sans "
->
-	<div class="section-inner-container w-full h-full max-w-[111rem] p-10">
-		<div class="img-container w-full m-auto relative">
-			<img
-				src="/src/lib/assets/home/mobile/image-header.jpg"
-				alt=""
-				class="lg:max-w-none lg:w-[80rem] lg:absolute bottom-[-400px] lg:hidden"
-			/>
-		</div>
-		<div
-			class="textContainer flex justify-center items-center flex-col text-center w-[32.8rem]
-			container m-auto lg:m-0 lg:pl-20 xl:pl-0 lg:text-left lg:items-start z-10
-			transition-all"
-		>
-			<h4
-				class="mb-[1.6rem] md:text-lg text-sm tracking-wider text-zinc-500
-				transition-all"
-			>
-				NEW PRODUCT
-			</h4>
-			<h1
-				class="mb-[2.4rem] text-xl tracking-[1.5px] text-white
-				font-bold lg:text-[5.6rem] lg:leading-[5.8rem] transition-all"
-			>
-				XX99 MARK II HEADPHONES
-			</h1>
-			<p
-				class="mb-[2.8rem] md:text-lg text-sm leading-10 font-extralight text-zinc-200
-				 transition-all"
-			>
-				Experience natural, lifelike audio <br />and exceptional build quality for the <br /> passionate
-				music enthusiast.
-			</p>
+<div class="header__image">
+	<section class="header__bottom">
+		<p class="header__bottom--new-product tracking-wide text-zinc-300">NEW PRODUCT</p>
+		<h1 class="header__bottom--title text-white leading-10 text-4xl lg:text-7xl font-bold">
+			XX99 MARK II HEADPHONES
+		</h1>
+		<p class="header__bottom--paragraph text-zinc-300">
+			Experience natural, lifelike audio and exceptional build quality made for the passionate music
+			enthusiast.
+		</p>
+		<div class="md:block">
 			<Button1 />
 		</div>
-	</div>
-</section>
+	</section>
+</div>
 
 <style>
-	.section-inner-container {
-		display: grid;
-		grid: 'textAndImage' 1fr / 1fr;
+	.header__image {
+		background-image: url('/src/lib/assets/home/desktop/image-hero.jpg');
+		
+	}
+	.header__image {
+		background-color: var(--clr-lighter-dark);
+		background-image: url('/src/lib/assets/home/mobile/image-header.jpg');
+		background-size: cover;
+		background-position: center -90px;
+		background-blend-mode: difference;
+		background-repeat: no-repeat;
+		margin: 0;
 	}
 
-	.textContainer,
-	.img-container {
-		grid-area: textAndImage;
+	.header__bottom {
+		color: var(--clr-light);
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+		gap: 1.75em;
+
+		text-align: center;
+		max-width: 328px;
+		padding: 6.75em 0 7em;
+		margin: 0 auto;
 	}
 
-	@media screen and (min-width: 1024px) {
-		.section-inner-container {
-			grid: 'text img' 1fr / min-content 1fr;
+	.header__bottom--new-product {
+		opacity: 0.5;
+	}
+
+	.header__bottom--title {
+		text-align: center;
+		letter-spacing: 2px;
+		line-height: 40px;
+	}
+	@media (min-width: 376px) {
+		/* header bottom */
+		.header__image {
+			background-image: url('/src/lib/assets/home/tablet/image-header.jpg');
 		}
 
-		.textContainer {
-			grid-area: text;
+		.header__bottom {
+			max-width: 379px;
+			padding: 7.875em 0 10.4375em;
+			gap: 2.5em;
 		}
 
-		.img-container {
-			grid-area: img;
+		.header__bottom--paragraph {
+			max-width: 349px;
 		}
 
-		.section-inner-container {
-			position: relative;
+		.header__bottom--title {
+			font-size: var(--fs-h2);
+		}
+	}
+
+	@media (min-width: 400px) {
+		.header__bottom--title {
+			line-height: 58px;
+		}
+	}
+
+	@media (min-width: 769px) {
+		/* header bottom */
+		.header__image {
+			background-image: url('/src/lib/assets/home/desktop/image-hero.jpg');
 		}
 
-		.section-inner-container::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: url('/src/lib/assets/home/desktop/image-hero.jpg') no-repeat center center;
-			background-size: cover;
+		.header__bottom {
+			max-width: 398px;
+			padding: 8em 0 9.875em;
+			margin-left: calc((165 / 1440) * 100%);
+			align-items: flex-start;
+			text-align: left;
+			gap: 1.5em;
+		}
+
+		.header__bottom--title {
+			text-align: left;
 		}
 	}
 </style>

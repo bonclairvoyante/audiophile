@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
@@ -23,9 +23,12 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Manrope Variable', 'sans-serif']
+			},
+			backgroundImage: {
+				'mobile-hero': "url('/src/lib/assets/home/mobile/image-header.jpg')",
+				'desktop-hero': "url('')"
 			}
 		}
 	},
 	plugins: []
 } as Config;
- 
