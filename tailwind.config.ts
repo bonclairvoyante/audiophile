@@ -11,11 +11,11 @@ export default {
 			colors: {
 				orange: {
 					DEFAULT: '#D87D4A',
-					light: '#FBAF85'
+					bright: '#FBAF85'
 				},
 				white: {
 					DEFAULT: '#FFFFFF',
-					light: 'FAFAFA',
+					bright: 'FAFAFA',
 					grey: '#F1F1F1'
 				},
 				black: '#000000',
@@ -23,10 +23,6 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Manrope Variable', 'sans-serif']
-			},
-			backgroundImage: {
-				'mobile-hero': "url('/src/lib/assets/home/mobile/image-header.jpg')",
-				'desktop-hero': "url('')"
 			}
 		}
 	},

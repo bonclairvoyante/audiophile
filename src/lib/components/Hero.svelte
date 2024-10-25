@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button1 from './Button1.svelte';
+	import Button3 from './Button3.svelte';
 </script>
 
 <div class="header__image">
@@ -14,6 +15,7 @@
 		</p>
 		<div class="md:block">
 			<Button1 />
+			
 		</div>
 	</section>
 </div>
