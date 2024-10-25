@@ -7,7 +7,7 @@
 	}
 </script>
 
-<nav class="container px-12 py-8 mx-auto flex justify-between items-center bg-charcoal text-white">
+<nav class="px-6 py-6 flex justify-between items-center bg-charcoal text-white">
 	<div class="flex gap-2 items-center">
 		<div class=" mt-2 lg:hidden">
 			<Menu />

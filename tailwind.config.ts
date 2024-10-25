@@ -3,9 +3,9 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		letterSpacing: {
-			wide: '0.25em',
-			wider: '0.5em',
-			widest: '0.75em'
+			wide: '0.5em',
+			wider: '0.75em',
+			widest: '1em'
 		},
 		extend: {
 			colors: {
