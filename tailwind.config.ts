@@ -23,6 +23,9 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Manrope Variable', 'sans-serif']
+			},
+			backgroundImage: {
+				thumbnail: "url('/src/lib/assets/shared/mobile/image-xx99-mark-one-headphones.jpg')"
 			}
 		}
 	},
