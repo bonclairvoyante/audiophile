@@ -1,16 +1,15 @@
-<script lang="ts">
-	import Button1 from './Button1.svelte';
-</script>
 <div class="hero-image font-sans">
 	<section class="hero-bottom">
 		<p class="hero-bottom--new-product tracking-wide text-zinc-300">NEW PRODUCT</p>
-		<h1 class="hero-bottom--title text-white leading-10 text-5xl font-bold">XX99 MARK II HEADPHONES</h1>
+		<h1 class="hero-bottom--title text-white leading-10 text-5xl font-bold">
+			XX99 MARK II HEADPHONES
+		</h1>
 		<p class="hero-bottom--paragraph text-zinc-300">
 			Experience natural, lifelike audio and exceptional build quality made for the passionate music
 			enthusiast.
 		</p>
 		<div class="md:block">
-			<Button1 />
+			<button class="bg-orange hover:bg-orange-bright text-white px-4 py-4"> SEE PRODUCT </button>
 		</div>
 	</section>
 </div>
@@ -20,7 +19,6 @@
 		background-image: url('/src/lib/assets/home/desktop/image-hero.jpg');
 	}
 	.hero-image {
-		
 		background-image: url('/src/lib/assets/home/mobile/image-header.jpg');
 		background-size: cover;
 		background-position: center -90px;
@@ -64,8 +62,6 @@
 		.hero-bottom--paragraph {
 			max-width: 349px;
 		}
-
-		
 	}
 
 	@media (min-width: 400px) {
@@ -93,4 +89,4 @@
 			text-align: left;
 		}
 	}
-</style> 
+</style>

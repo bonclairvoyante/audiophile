@@ -1,3 +1,3 @@
-<button class="bg-white text-black hover:bg-black hover:text-white px-4 py-3 text-sm">
-    SEE PRODUCT
+<button class=" text-white bg-black hover:text-black hover:bg-white px-4 py-3 text-sm">
+	SEE PRODUCT
 </button>

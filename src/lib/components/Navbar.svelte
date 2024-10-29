@@ -2,9 +2,7 @@
 	import { Menu } from 'lucide-svelte';
 	import { ShoppingCart } from 'lucide-svelte';
 	let showMenu = false;
-	function toggleMenu() {
-		showMenu = !showMenu;
-	}
+
 </script>
 
 <nav class="px-6 py-6 flex justify-between items-center bg-charcoal text-white">

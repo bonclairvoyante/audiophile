@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="container mx-auto flex flex-col md:flex-row justify-center items-center gap-24 md:gap-4 p-6 md:p-24"
+	class="flex flex-col md:flex-row justify-center items-center md:gap-6 gap-24 mt-10 mb-10 xl:pt-20 w-full text-balanced"
 >
 	<div
 		class="flex flex-col justify-center items-center bg-white-grey rounded-xl p-6 md:p-12 relative"

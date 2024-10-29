@@ -25,7 +25,8 @@ export default {
 				sans: ['Manrope Variable', 'sans-serif']
 			},
 			backgroundImage: {
-				thumbnail: "url('/src/lib/assets/shared/mobile/image-xx99-mark-one-headphones.jpg')"
+				spiral: "url('/src/lib/assets/home/desktop/pattern-circles.svg')",
+				speaker: "url('src/lib/assets/home/desktop/image-speaker-zx7.jpg')"
 			}
 		}
 	},
