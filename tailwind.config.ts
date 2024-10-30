@@ -26,7 +26,8 @@ export default {
 			},
 			backgroundImage: {
 				spiral: "url('/src/lib/assets/home/desktop/pattern-circles.svg')",
-				speaker: "url('src/lib/assets/home/desktop/image-speaker-zx7.jpg')"
+				speakerdesktop: "url('src/lib/assets/home/desktop/image-speaker-zx7.jpg')",
+				speakermobile: "url('src/lib/assets/home/mobile/image-speaker-zx7.jpg')"
 			}
 		}
 	},
