@@ -26,9 +26,9 @@
 
 <!-- ZX7 Speaker -->
 <article
-	class="flex items-center md:mx-24 mx-4 mt-8 rounded-xl bg-speakermobile lg:bg-speakerdesktop bg-no-repeat bg-cover bg-center mb-14 p-8 "
+	class="flex items-center md:mx-24 mx-4 mt-8 rounded-xl bg-speakermobile lg:bg-speakerdesktop bg-no-repeat bg-cover bg-center mb-14 p-12"
 >
-	<div class="flex flex-col justify-center items-center gap-6">
+	<div class="flex flex-col items-start gap-8">
 		<h3 class="font-bold text-3xl">ZX7 SPEAKER</h3>
 		<ButtonClear />
 	</div>
@@ -42,7 +42,7 @@
 		class="rounded-lg"
 	/>
 	<div
-		class="flex flex-col justify-start items-center text-center bg-white-grey rounded-xl max-w-1/2 grow gap-6 p-5  lg:py-[4.5rem]"
+		class="flex flex-col justify-start items-center text-center bg-white-grey rounded-xl max-w-1/2 grow gap-6 p-5 lg:py-[4.5rem]"
 	>
 		<h3 class="font-bold text-3xl mb-8">XY1 EARPHONES</h3>
 		<ButtonClear />
