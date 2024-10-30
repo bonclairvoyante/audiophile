@@ -27,7 +27,12 @@ export default {
 			backgroundImage: {
 				spiral: "url('/src/lib/assets/home/desktop/pattern-circles.svg')",
 				speakerdesktop: "url('src/lib/assets/home/desktop/image-speaker-zx7.jpg')",
-				speakermobile: "url('src/lib/assets/home/mobile/image-speaker-zx7.jpg')"
+				speakermobile: "url('src/lib/assets/home/mobile/image-speaker-zx7.jpg')",
+				earphonesdesktop:
+					"url('/src/lib/assets/product-yx1-earphones/desktop/image-gallery-2.jpg')",
+				earphonesmobile: "url('/src/lib/assets/product-yx1-earphones/mobile/image-gallery-2.jpg')",
+				bestgeardesk: "url('/src/lib/assets/shared/desktop/image-best-gear.jpg')",
+				bestgearmobile: "url('/src/lib/assets/shared/mobile/image-best-gear.jpg')"
 			}
 		}
 	},

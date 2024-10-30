@@ -1,5 +1,9 @@
-<div
-	class="flex lg:flex-row flex-col bg-orange bg-spiral justify-start items-center rounded-lg md:mx-12 mx-3 text-balance"
+<script>
+	import ButtonClear from './ButtonClear.svelte';
+</script>
+
+<article
+	class="flex lg:flex-row flex-col bg-orange bg-spiral justify-start items-center rounded-xl md:mx-24 mx-4 text-balance"
 >
 	<enhanced:img
 		src="/src/lib/assets/shared/desktop/image-category-thumbnail-speakers.png"
@@ -17,15 +21,44 @@
 			</button>
 		</div>
 	</div>
-</div>
+</article>
+
+<article
+	class="flex justify-start items-center md:mx-24 mx-4 mt-8 rounded-xl bg-speakermobile md:bg-speakerdesktop bg-no-repeat h-96 bg-cover bg-center"
+>
+	<div class="flex flex-col justify-center items-center gap-8 p-12">
+		<h3 class="font-bold text-3xl">ZX7 SPEAKER</h3>
+		<ButtonClear />
+	</div>
+</article>
+
+<article class="flex flex-col md:flex-row md:mx-24 mx-4 mt-8 gap-5">
+	<img
+		src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-2.jpg"
+		alt="YX1 Earphones"
+		class="rounded-lg max-w-1/2 grow"
+	/>
+	<div
+		class="flex flex-col justify-start items-center py-20 h-auto text-center bg-white-grey rounded-xl max-w-1/2 grow gap-4 mb-28"
+	>
+		<h3 class="font-bold text-3xl mb-8">XY1 EARPHONES</h3>
+		<ButtonClear />
+	</div>
+</article>
 
 <div
-	class="flex justify-start items-center md:mx-12 mx-3 mt-8 rounded-lg bg-speakermobile md:bg-speakerdesktop bg-no-repeat bg-cover bg-center h-96"
+	class="max-w-sm  rounded-lg shadow"
 >
-	<div class="flex flex-col justify-center items-center p-12">
-		<h3 class="font-bold text-3xl pb-4">ZX7 SPEAKER</h3>
-		<button class=" text-white bg-black hover:text-black hover:bg-white px-4 py-3 text-sm block">
-			SEE PRODUCT
-		</button>
+	<img class="rounded-t-lg" src="/src/lib/assets/shared/desktop/image-best-gear.jpg" alt="card" />
+
+	<div class="p-5">
+		<h5 class="mb-2 text-2xl font-bold tracking-tight">
+			Noteworthy technology acquisitions 2021
+		</h5>
+
+		<p class="mb-3 font-normal">
+			Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
+			chronological order.
+		</p>
 	</div>
 </div>
