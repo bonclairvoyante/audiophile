@@ -3,10 +3,13 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		letterSpacing: {
+			small:'0.25em',
+			smaller:'0.125',
 			wide: '0.5em',
 			wider: '0.75em',
 			widest: '1em'
 		},
+
 		extend: {
 			colors: {
 				orange: {
@@ -28,7 +31,9 @@ export default {
 				spiral: "url('/src/lib/assets/home/desktop/pattern-circles.svg')",
 				speakerdesktop: "url('src/lib/assets/home/desktop/image-speaker-zx7.jpg')",
 				speakermobile: "url('src/lib/assets/home/mobile/image-speaker-zx7.jpg')",
-				
+				earphonesdesktop:
+					"url('/src/lib/assets/product-yx1-earphones/desktop/image-gallery-2.jpg')",
+				earphonesmobile: "url('/src/lib/assets/product-yx1-earphones/mobile/image-gallery-2.jpg')"
 			}
 		}
 	},

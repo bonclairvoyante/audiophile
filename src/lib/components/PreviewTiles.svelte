@@ -26,7 +26,7 @@
 
 <!-- ZX7 Speaker -->
 <article
-	class="flex items-center md:mx-24 mx-4 mt-8 rounded-xl bg-speakermobile lg:bg-speakerdesktop bg-no-repeat bg-cover bg-center mb-14 p-12"
+	class="flex items-center md:mx-24 mx-4 mt-8 rounded-xl bg-speakermobile lg:bg-speakerdesktop bg-cover bg-center mb-14 p-12"
 >
 	<div class="flex flex-col items-start gap-8">
 		<h3 class="font-bold text-3xl">ZX7 SPEAKER</h3>
@@ -44,24 +44,45 @@
 	<div
 		class="flex flex-col justify-start items-center text-center bg-white-grey rounded-xl max-w-1/2 grow gap-6 p-5 lg:py-[4.5rem]"
 	>
-		<h3 class="font-bold text-3xl mb-8">XY1 EARPHONES</h3>
+		<p class="font-bold text-3xl mb-8">XY1 EARPHONES</p>
 		<ButtonClear />
 	</div>
 </article>
 
-<div class="max-w-sm rounded-lg shadow">
-	<enhanced:img
-		class="rounded-t-lg"
-		src="/src/lib/assets/shared/desktop/image-best-gear.jpg"
-		alt="card"
-	/>
+<article
+	class="flex flex-col items-center lg:flex-row-reverse lg:justify-between mx-4 md:mx-24 rounded-lg gap-3 lg:gap-16"
+>
+	<div class="image rounded-lg bg-cover lg:w-48"></div>
+	<div class="p-5 flex flex-col gap-2 text-center lg:text-start">
+		<h4 class="mb-2 text-2xl font-bold leading-9 tracking-smaller">
+			BRINGING YOU THE<br /> <span class="text-orange">BEST</span> AUDIO GEAR
+		</h4>
 
-	<div class="p-5">
-		<h5 class="mb-2 text-2xl font-bold tracking-tight">Noteworthy technology acquisitions 2021</h5>
-
-		<p class="mb-3 font-normal">
-			Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
-			chronological order.
+		<p class="mb-3 text text-balance lg:w-[25rem]">
+			Bringing you the best audio gear Located at the heart of New York City, Audiophile is the
+			premier store for high end headphones, earphones, speakers, and audio accessories. We have a
+			large showroom and luxury demonstration rooms available for you to browse and experience a
+			wide range of our products. Stop by our store to meet some of the fantastic people who make
+			Audiophile the best place to buy your portable audio equipment.
 		</p>
 	</div>
-</div>
+</article>
+
+<style>
+	.image {
+		width: 100%;
+		background: url('/src/lib/assets/shared/mobile/image-best-gear.jpg');
+		background-position: top center;
+		height: 30rem;
+
+		@media (min-width: 768px) {
+			background: url('/src/lib/assets/shared/tablet/image-best-gear.jpg');
+			background-position: center;
+		}
+
+		@media (min-width: 1024px) {
+			background: url('/src/lib/assets/shared/desktop/image-best-gear.jpg');
+			background-position: center;
+		}
+	}
+</style>
