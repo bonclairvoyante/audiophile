@@ -33,7 +33,7 @@
 </article>
 
 <article class="flex flex-col md:flex-row md:mx-24 mx-4 mt-8 gap-5">
-	<img
+	<enhanced:img
 		src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-2.jpg"
 		alt="YX1 Earphones"
 		class="rounded-lg max-w-1/2 grow"
@@ -49,7 +49,7 @@
 <div
 	class="max-w-sm  rounded-lg shadow"
 >
-	<img class="rounded-t-lg" src="/src/lib/assets/shared/desktop/image-best-gear.jpg" alt="card" />
+	<enhanced:img class="rounded-t-lg" src="/src/lib/assets/shared/desktop/image-best-gear.jpg" alt="card" />
 
 	<div class="p-5">
 		<h5 class="mb-2 text-2xl font-bold tracking-tight">
