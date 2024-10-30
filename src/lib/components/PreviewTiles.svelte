@@ -36,25 +36,25 @@
 	<enhanced:img
 		src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-2.jpg"
 		alt="YX1 Earphones"
-		class="rounded-lg max-w-1/2 grow"
+		class="rounded-lg"
 	/>
 	<div
-		class="flex flex-col justify-start items-center py-20 h-auto text-center bg-white-grey rounded-xl max-w-1/2 grow gap-4 mb-28"
+		class="flex flex-col justify-start items-center text-center bg-white-grey rounded-xl max-w-1/2 grow gap-6 p-10 mb-28 py-[4.5rem]"
 	>
 		<h3 class="font-bold text-3xl mb-8">XY1 EARPHONES</h3>
 		<ButtonClear />
 	</div>
 </article>
 
-<div
-	class="max-w-sm  rounded-lg shadow"
->
-	<enhanced:img class="rounded-t-lg" src="/src/lib/assets/shared/desktop/image-best-gear.jpg" alt="card" />
+<div class="max-w-sm rounded-lg shadow">
+	<enhanced:img
+		class="rounded-t-lg"
+		src="/src/lib/assets/shared/desktop/image-best-gear.jpg"
+		alt="card"
+	/>
 
 	<div class="p-5">
-		<h5 class="mb-2 text-2xl font-bold tracking-tight">
-			Noteworthy technology acquisitions 2021
-		</h5>
+		<h5 class="mb-2 text-2xl font-bold tracking-tight">Noteworthy technology acquisitions 2021</h5>
 
 		<p class="mb-3 font-normal">
 			Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
