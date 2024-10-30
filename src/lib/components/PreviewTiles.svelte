@@ -26,7 +26,7 @@
 
 <!-- ZX7 Speaker -->
 <article
-	class="flex justify-start items-center md:mx-24 mx-4 mt-8 rounded-xl bg-speakermobile lg:bg-speakerdesktop bg-no-repeat bg-cover bg-center mb-14"
+	class="flex justify-start items-center md:mx-24 mx-4 mt-8 rounded-xl bg-speakermobile bg-no-repeat bg-cover bg-center mb-14"
 >
 	<div class="flex flex-col justify-center items-center gap-8 p-12">
 		<h3 class="font-bold text-3xl">ZX7 SPEAKER</h3>
