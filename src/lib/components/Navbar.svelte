@@ -18,10 +18,10 @@
 			? 'flex'
 			: 'hidden'}"
 	>
-		<a class="text-gray-100 hover:text-orange-bright" href="/home">Home</a>
-		<a class="text-gray-100 hover:text-orange-bright" href="/src/routes/headphones">Headphones</a>
-		<a class="text-gray-100 hover:text-orange-bright" href="/src/routes/speakers">Speakers</a>
-		<a class="text-gray-100 hover:text-orange-bright" href="/src/routes/earphones">Earphones</a>
+		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/home">Home</a>
+		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/src/routes/headphones">Headphones</a>
+		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/src/routes/speakers">Speakers</a>
+		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/src/routes/earphones">Earphones</a>
 	</div>
 	<a href="/src/routes/cart"><ShoppingCart /></a>
 </nav>
