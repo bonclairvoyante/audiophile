@@ -1,3 +1,7 @@
+<script lang="ts">
+	import ProductCardList from '$lib/components/ProductCardList.svelte';
+</script>
+
 <main class="mx-4 md:mx-24">
 	<!-- xx99 Mark II -->
 	<section
@@ -52,7 +56,7 @@
 	</section>
 	<!-- XX59 Headphones -->
 	<section
-		class="flex flex-col lg:flex-row gap-4 lg:gap-16 text-center lg:text-start mt-8 md:mt-12 mb-20"
+		class="flex flex-col lg:flex-row gap-4 lg:gap-16 text-center lg:text-start mt-8 md:mt-12 mb-36 lg:mb-56"
 	>
 		<div class="rounded-md">
 			<enhanced:img
@@ -74,4 +78,5 @@
 			</div>
 		</div>
 	</section>
+	<ProductCardList />
 </main>
