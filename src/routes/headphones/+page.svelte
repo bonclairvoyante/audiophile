@@ -4,7 +4,7 @@
 		class="flex flex-col lg:flex-row gap-4 lg:gap-16 text-center lg:text-start mt-8 md:mt-12 mb-20"
 	>
 		<div class="rounded-md p-3">
-			<img
+			<enhanced:img
 				src="/src/lib/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg"
 				alt="XX99 Mark II"
 			/>
@@ -43,7 +43,7 @@
 			</div>
 		</div>
 		<div>
-			<img
+			<enhanced:img
 				src="/src/lib/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg"
 				alt="XX99 Mark I"
 				class="rounded-md"
@@ -55,7 +55,7 @@
 		class="flex flex-col lg:flex-row gap-4 lg:gap-16 text-center lg:text-start mt-8 md:mt-12 mb-20"
 	>
 		<div class="rounded-md">
-			<img
+			<enhanced:img
 				src="/src/lib/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg"
 				alt="XX59 Headphones"
 			/>
