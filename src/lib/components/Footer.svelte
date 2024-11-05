@@ -13,7 +13,7 @@
 		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/earphones">Earphones</a>
 	</div>
 	<div class="text-center md:text-start md:px-24">
-		<p class="text-zinc-400 text-balance tracking-smaller font-thin font text-xs leading-relaxed">
+		<p class="text-zinc-400 text-balance tracking-smaller font text-sm lg:text-xl leading-relaxed">
 			Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music
 			lovers and sound specialists who are devoted to helping you get the most out of personal
 			audio. Come and visit our demo facility - we’re open 7 days a week.
