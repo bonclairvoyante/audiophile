@@ -7,16 +7,10 @@
 		<a class="text-2xl font-bold md:text-3xl text-white-grey" href="/src/routes">audiophile </a>
 	</div>
 	<div class="flex flex-col md:flex-row gap-4 md:gap-12 mb-8 text-center md:text-start px-24">
-		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/home">Home</a>
-		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/src/routes/headphones"
-			>Headphones</a
-		>
-		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/src/routes/speakers"
-			>Speakers</a
-		>
-		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/src/routes/earphones"
-			>Earphones</a
-		>
+		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/">Home</a>
+		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/headphones">Headphones</a>
+		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/speakers">Speakers</a>
+		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/earphones">Earphones</a>
 	</div>
 	<div class="text-center md:text-start md:px-24">
 		<p class="text-zinc-400 text-balance tracking-smaller font-thin font text-xs leading-relaxed">

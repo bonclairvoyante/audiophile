@@ -14,7 +14,7 @@
 			class="absolute left-0.5 -top-24 lg:-top-32"
 		/>
 		<h3 class="text-lg font-bold pt-8 px-3">HEADPHONES</h3>
-		<Button3 />
+		<a href="/headphones"><Button3 /></a>
 	</div>
 	<div
 		class="flex flex-col justify-center items-center bg-white-grey rounded-md p-4 relative product-card-speaker"
@@ -25,7 +25,7 @@
 			class="absolute left-0.5 -top-20 lg:-top-28"
 		/>
 		<h3 class="text-lg font-bold pt-8 px-6">SPEAKERS</h3>
-		<Button3 />
+		<a href="/speakers"><Button3 /></a>
 	</div>
 	<div
 		class="flex flex-col justify-center items-center bg-white-grey rounded-md p-4 relative product-card-earphones"
@@ -36,7 +36,7 @@
 			class="absolute left-0.5 -top-20 lg:-top-24"
 		/>
 		<h3 class="text-lg font-bold pt-8 px-6">EARPHONES</h3>
-		<Button3 />
+		<a href="/earphones"><Button3 /></a>
 	</div>
 </div>
 
