@@ -38,10 +38,10 @@
 		<enhanced:img
 			src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-2.jpg"
 			alt="YX1 Earphones"
-			class="rounded-lg"
+			class="rounded-lg w-full"
 		/>
 		<div
-			class="flex flex-col items-center text-center bg-white-grey rounded-xl max-w-1/2 grow gap-6 p-5 lg:py-[4.5rem]"
+			class="flex flex-col items-center text-center bg-white-grey rounded-xl gap-3 p-5 lg:py-[4.5rem]"
 		>
 			<p class="font-bold text-3xl mb-8">XY1 EARPHONES</p>
 			<ButtonClear />
