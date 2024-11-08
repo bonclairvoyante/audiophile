@@ -60,6 +60,9 @@ importers:
       svelte-check:
         specifier: ^4.0.0
         version: 4.0.5(picomatch@4.0.2)(svelte@5.1.9)(typescript@5.6.3)
+      svelte-hamburgers:
+        specifier: ^5.0.0
+        version: 5.0.0(svelte@5.1.9)
       tailwindcss:
         specifier: ^3.4.14
         version: 3.4.14
@@ -1438,6 +1441,11 @@ packages:
     peerDependenciesMeta:
       svelte:
         optional: true
+
+  svelte-hamburgers@5.0.0:
+    resolution: {integrity: sha512-MMb47VCozKDgn/jtmeqw+CbI3cZmkDXd/FG3VCkReMdw2YCSOaWYLsqsXiWTWoQE/oSmw1vH/Tm5mChqlsldHQ==}
+    peerDependencies:
+      svelte: ^5.0.0
 
   svelte-parse-markup@0.1.5:
     resolution: {integrity: sha512-T6mqZrySltPCDwfKXWQ6zehipVLk4GWfH1zCMGgRtLlOIFPuw58ZxVYxVvotMJgJaurKi1i14viB2GIRKXeJTQ==}
@@ -2853,6 +2861,10 @@ snapshots:
       postcss: 8.4.47
       postcss-scss: 4.0.9(postcss@8.4.47)
     optionalDependencies:
+      svelte: 5.1.9
+
+  svelte-hamburgers@5.0.0(svelte@5.1.9):
+    dependencies:
       svelte: 5.1.9
 
   svelte-parse-markup@0.1.5(svelte@5.1.9):

@@ -1,15 +1,37 @@
 <script lang="ts">
-	import { Menu } from 'lucide-svelte';
 	import { ShoppingCart } from 'lucide-svelte';
-	let showMenu = false;
+	import { Hamburger } from 'svelte-hamburgers';
+	import Menu from './Menu.svelte';
+
+	let open = $state(false);
+	let showMenu = $state(false);
 </script>
 
 <nav class="px-6 py-6 flex justify-between items-center bg-charcoal text-white">
 	<div class="flex gap-2 items-center">
 		<div class=" mt-2 lg:hidden">
-			<Menu />
+			<div class="lg:hidden">
+				<Hamburger
+					bind:open
+					type="spring"
+					title="Toggle products menu"
+					ariaControls="nav"
+					--color="white"
+					--active-color="#FBAF85"
+					--padding="2px"
+					--layer-width="20px"
+					--layer-height=""
+					--layer-spacing="4px"
+				/>
+
+				{#if open}
+					<Menu />
+				{/if}
+			</div>
 		</div>
-		<a class="text-xl font-bold md:text-2xl" href="/src/routes">audiophile </a>
+		{#if !open}
+			<a class="text-xl font-bold md:text-2xl" href="/">audiophile </a>
+		{/if}
 	</div>
 
 	<div
@@ -22,5 +44,7 @@
 		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/speakers">Speakers</a>
 		<a class="text-gray-100 hover:text-orange-bright uppercase" href="/earphones">Earphones</a>
 	</div>
-	<a href="/src/routes/cart"><ShoppingCart /></a>
+	{#if !open}
+		<a href="/src/routes/cart"><ShoppingCart /></a>
+	{/if}
 </nav>
