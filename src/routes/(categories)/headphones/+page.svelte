@@ -1,7 +1,3 @@
-<script lang="ts">
-	import ProductCardList from '$lib/components/ProductCardList.svelte';
-</script>
-
 <main class="mx-4 md:mx-24">
 	<!-- xx99 Mark II -->
 	<section
@@ -78,5 +74,4 @@
 			</div>
 		</div>
 	</section>
-	<ProductCardList />
 </main>

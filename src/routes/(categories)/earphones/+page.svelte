@@ -1,6 +1,4 @@
-<script lang="ts">
-	import ProductCardList from '$lib/components/ProductCardList.svelte';
-</script>
+
 
 <main class="mx-4 md:mx-24 pb-2 lg:pb-12">
 	<!-- YX1 Wireless earphones -->
@@ -28,5 +26,4 @@
 		</div>
 	</section>
 
-	<ProductCardList />
 </main>

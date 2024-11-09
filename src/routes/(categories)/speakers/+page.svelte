@@ -1,6 +1,4 @@
-<script lang="ts">
-	import ProductCardList from '$lib/components/ProductCardList.svelte';
-</script>
+
 <main class="mx-4 md:mx-24 pb-10">
     <!-- ZX9 Speaker -->
     <section
@@ -48,5 +46,5 @@
 			/>
 		</div>
 	</section>
-    <ProductCardList />
+  
 </main>
