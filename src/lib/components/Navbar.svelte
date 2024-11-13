@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ShoppingCart } from 'lucide-svelte';
+	import Cart from './Cart.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
 
 	import { fly } from 'svelte/transition';
@@ -78,6 +78,6 @@
 	</ul>
 
 	{#if !open}
-		<ShoppingCart />
+		<Cart />
 	{/if}
 </nav>

@@ -36,12 +36,12 @@
 	<!-- XY1 Earphones -->
 	<article class="flex flex-col md:flex-row mt-10 gap-3 mb-16">
 		<enhanced:img
-			src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-2.jpg"
+			src="/src/lib/assets/product-yx1-earphones/mobile/image-gallery-2.jpg"
 			alt="YX1 Earphones"
-			class="rounded-lg w-full"
+			class="rounded-lg"
 		/>
 		<div
-			class="flex flex-col items-center text-center bg-white-grey rounded-xl gap-3 p-5 lg:py-[4.5rem]"
+			class="flex flex-col justify-center items-center gap-3 text-center bg-white-grey rounded-lg px-[1rem] py-[2rem] md:py-[0.9rem] md:px-[1.4rem] lg:px-[5rem] grow"
 		>
 			<p class="font-bold text-3xl mb-8">XY1 EARPHONES</p>
 			<ButtonClear />
