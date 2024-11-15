@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
-	
+
 	import Button3 from '$lib/components/Button3.svelte';
 	import ButtonClear from '$lib/components/ButtonClear.svelte';
 </script>
