@@ -1,8 +1,10 @@
 import type { Config } from 'tailwindcss';
+
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		letterSpacing: {
+			
 			small: '0.25em',
 			smaller: '0.125',
 			wide: '0.5em',
