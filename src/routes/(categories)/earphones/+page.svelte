@@ -17,7 +17,7 @@
 				noise cancellation feature.
 			</p>
 			<div class="block">
-				<a href="../earphones/yx1"
+				<a href="/earphones/yx1"
 					><button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase"
 						>see product</button
 					></a
