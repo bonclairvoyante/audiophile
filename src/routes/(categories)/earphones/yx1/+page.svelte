@@ -13,6 +13,7 @@
 		<enhanced:img
 			src="/src/lib/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
 			class="rounded-md"
+			alt="yx1-earphones"
 		/>
 		<div class="flex flex-col gap-4 md:gap-2 self-center">
 			<p class="tracking-wide uppercase text-orange font-sans">New Product</p>
@@ -62,15 +63,18 @@
 			<enhanced:img
 				src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-1.jpg"
 				class="rounded-md"
+				alt="yx1-earphones"
 			/>
 			<enhanced:img
 				src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-2.jpg"
 				class="rounded-md"
+				alt="yx1-earphones"
 			/>
 		</div>
 		<enhanced:img
 			src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-3.jpg"
 			class="rounded-md"
+			alt="yx1-earphones"
 		/>
 	</section>
 	<!-- you may also like section -->
@@ -81,6 +85,7 @@
 				<enhanced:img
 					src="/src/lib/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg"
 					class="rounded-md"
+					alt="xx99-mark-one-headphones"
 				/>
 				<h3 class="font-bold text-2xl uppercase">xx99 mark I</h3>
 				<div class="block">
@@ -94,6 +99,7 @@
 				<enhanced:img
 					src="/src/lib/assets/product-xx59-headphones/mobile/image-product.jpg"
 					class="rounded-md"
+					alt="xx59-headphones"
 				/>
 				<h3 class="font-bold text-2xl uppercase">xx59</h3>
 				<button class="bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase"
@@ -104,6 +110,7 @@
 				<enhanced:img
 					src="/src/lib/assets/product-zx9-speaker/mobile/image-product.jpg"
 					class="rounded-md"
+					alt="zx9-speaker"
 				/>
 				<h3 class="font-bold text-2xl uppercase">{data.products[5].name}</h3>
 				<button class="bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase"

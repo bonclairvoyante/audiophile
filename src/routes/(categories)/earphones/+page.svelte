@@ -1,4 +1,3 @@
-
 <main class="mx-4 md:mx-24 pb-2 lg:pb-12">
 	<!-- YX1 Wireless earphones -->
 	<section
@@ -18,11 +17,12 @@
 				noise cancellation feature.
 			</p>
 			<div class="block">
-				<button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase"
-					>see product</button
+				<a href="../earphones/yx1"
+					><button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase"
+						>see product</button
+					></a
 				>
 			</div>
 		</div>
 	</section>
-
 </main>
