@@ -1,5 +1,4 @@
 <script lang="ts">
-	
 	import { Plus, Minus } from 'lucide-svelte';
 	import GoBack from '$lib/components/GoBack.svelte';
 
@@ -8,9 +7,9 @@
 
 <main class="mx-[1.51em] mb-24">
 	<!-- Card section -->
-	 <div class="p-4">
+	<div class="p-4">
 		<GoBack />
-	 </div>
+	</div>
 	<section class="p-3 md:p-4 lg:p-5 flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-10 text-start">
 		<enhanced:img
 			src="/src/lib/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
@@ -19,11 +18,13 @@
 		/>
 		<div class="flex flex-col gap-4 md:gap-2 self-center">
 			<p class="tracking-wide uppercase text-orange font-sans">New Product</p>
-			<h1 class="uppercase text-3xl lg:text-5xl font-bold">{data.products[0].name}</h1>
+			<h1 class="uppercase text-3xl lg:text-5xl font-bold">YX1 Wireless Earphones</h1>
 			<p class="text-zinc-700">
-				{data.products[0].description}
+				Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless
+				Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active
+				noise cancellation feature.
 			</p>
-			<p class="font-bold lg:py-4">$ {data.products[0].price}</p>
+			<p class="font-bold lg:py-4">$ 599</p>
 			<div class="flex gap-3 lg:py-3.5 lg:justify-start">
 				<div class="border bg-white-grey px-6 md:px-8 py-3 uppercase flex gap-x-4 md:gap-6">
 					<button><Minus size="14" color="gray" /></button>
@@ -40,8 +41,19 @@
 	<section class="p-3 md:p-4 lg:p-5">
 		<h2 class="uppercase font-bold text-2xl lg:text-3xl">Features</h2>
 		<div class="tracking-smaller font-light text-zinc-700">
-			<p class="my-6">{data.products[0].featureuno}</p>
-			<p>{data.products[0].featuresec}</p>
+			<p class="my-6">
+				Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved
+				ergonomics designed for full day wearing, these revolutionary earphones have been finely
+				crafted to provide you with the perfect fit, delivering complete comfort all day long while
+				enjoying exceptional noise isolation and truly immersive sound.
+			</p>
+			<p>
+				The YX1 Wireless Earphones features customizable controls for volume, music, calls, and
+				voice assistants built into both earbuds. The new 7-hour battery life can be extended up to
+				28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship
+				with a splash resistant design now available in an all new white and grey color scheme as
+				well as the popular classic black.
+			</p>
 		</div>
 	</section>
 	<section
@@ -49,12 +61,26 @@
 	>
 		<h2 class="uppercase font-bold text-2xl lg:text-3xl">In the box</h2>
 		<div class="flex flex-col gap-3 md:gap-2">
-			{#each data.products[0].includes as include}
-				<div class="flex gap-x-4">
-					<p class="text-orange font-bold">{include.quantity}x</p>
-					<p>{include.item}</p>
-				</div>
-			{/each}
+			<div class="flex gap-x-4">
+				<p class="text-orange font-bold">2x</p>
+				<p>Earphone unit</p>
+			</div>
+			<div class="flex gap-x-4">
+				<p class="text-orange font-bold">6x</p>
+				<p>Multi-size earplugs</p>
+			</div>
+			<div class="flex gap-x-4">
+				<p class="text-orange font-bold">1x</p>
+				<p>User manual</p>
+			</div>
+			<div class="flex gap-x-4">
+				<p class="text-orange font-bold">1x</p>
+				<p>USB-C charging cable</p>
+			</div>
+			<div class="flex gap-x-4">
+				<p class="text-orange font-bold">1x</p>
+				<p>Travel pouch</p>
+			</div>
 		</div>
 	</section>
 	<!-- Gallery -->
