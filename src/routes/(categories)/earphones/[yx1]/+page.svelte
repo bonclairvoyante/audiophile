@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { Plus, Minus } from 'lucide-svelte';
+	
 
 	let { data }: { data: PageData } = $props();
-	const itemsNumber = $state(0);
+	
 </script>
 
 <!-- <h1>{data.products[0].includes[0].quantity}</h1> -->
