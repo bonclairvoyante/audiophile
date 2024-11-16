@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { Plus, Minus } from 'lucide-svelte';
 	import GoBack from '$lib/components/GoBack.svelte';
-
-	let { data } = $props();
 </script>
 
 <main class="mx-[1.51em] mb-24">
@@ -140,7 +138,7 @@
 					class="rounded-md"
 					alt="zx9-speaker"
 				/>
-				<h3 class="font-bold text-2xl uppercase">{data.products[5].name}</h3>
+				<h3 class="font-bold text-2xl uppercase">zx9 speaker</h3>
 				<button class="bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase"
 					>see product</button
 				>
