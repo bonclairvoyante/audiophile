@@ -1,15 +1,16 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	
 	import { Plus, Minus } from 'lucide-svelte';
-	
+	import GoBack from '$lib/components/GoBack.svelte';
 
-	let { data }: { data: PageData } = $props();
-	
+	let { data } = $props();
 </script>
 
-<!-- <h1>{data.products[0].includes[0].quantity}</h1> -->
 <main class="mx-[1.51em] mb-24">
 	<!-- Card section -->
+	 <div class="p-4">
+		<GoBack />
+	 </div>
 	<section class="p-3 md:p-4 lg:p-5 flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-10 text-start">
 		<enhanced:img
 			src="/src/lib/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
