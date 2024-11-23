@@ -18,8 +18,10 @@
 				sound.
 			</p>
 			<div class="block">
-				<button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase"
-					>see product</button
+				<a href="/headphones/marktwo">
+					<button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase"
+						>see product</button
+					></a
 				>
 			</div>
 		</div>
@@ -37,9 +39,9 @@
 				and on the go.
 			</p>
 			<div class="block">
-				<button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase"
+				<a href="/headphones/markone"><button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase"
 					>see product</button
-				>
+				></a>
 			</div>
 		</div>
 		<div>
@@ -68,9 +70,9 @@
 				home or on the move.
 			</p>
 			<div class="block">
-				<button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase shadow-2xl"
+				<a href="/headphones/xx59"><button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase shadow-2xl"
 					>see product</button
-				>
+				></a>
 			</div>
 		</div>
 	</section>

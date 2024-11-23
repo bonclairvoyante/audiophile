@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Plus, Minus } from 'lucide-svelte';
 	import GoBack from '$lib/components/GoBack.svelte';
-	import { yx1, markone, xx59, zx9 } from '$lib/data/productdetails.json';
+	import { marktwo, markone, xx59, zx9 } from '$lib/data/productdetails.json';
 	import clsx from 'clsx';
 	import SeeButton from '$lib/components/SeeButton.svelte';
 
@@ -39,24 +39,23 @@
 	}
 </script>
 
-<main class="mx-[1.51em] mb-24">
+<main class="mx-[1.51rem] mb-24">
 	<!-- Card section -->
 	<div class="p-4">
 		<GoBack />
 	</div>
 	<section class="p-3 md:p-4 lg:p-5 flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-10 text-start">
 		<enhanced:img
-			src="/src/lib/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
+			src="/src/lib/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg"
 			class="rounded-md"
 			alt="yx1-earphones"
 		/>
 		<div class="flex flex-col gap-4 md:gap-2 md:self-center">
-			<p class="tracking-wide uppercase text-orange font-sans">New Product</p>
-			<h1 class="uppercase text-3xl lg:text-5xl font-bold">{yx1[0].name}</h1>
+			<h1 class="uppercase text-3xl lg:text-5xl font-bold">{markone[0].name}</h1>
 			<p class="text-zinc-700">
-				{yx1[0].description}
+				{markone[0].description}
 			</p>
-			<p class="font-bold lg:py-4">$ {yx1[0].price}</p>
+			<p class="font-bold lg:py-4">$ {markone[0].price}</p>
 			<div class="flex gap-3 lg:py-3.5 lg:justify-start">
 				<div
 					class="focus-within:ring-accent group flex items-stretch text-3xl font-semibold bg-white-grey"
@@ -77,7 +76,7 @@
 							bind:this={input}
 							class={clsx(
 								showCaret ? 'caret-white-bright' : 'caret-transparent',
-								'spin-hide w-[2em] bg-transparent py-2 text-center font-[inherit] outline-none'
+								'spin-hide w-[1.5em] bg-transparent py-2 text-center font-[inherit] outline-none'
 							)}
 							style="font-kerning: none"
 							type="number"
@@ -111,10 +110,10 @@
 		<h2 class="uppercase font-bold text-2xl lg:text-3xl">Features</h2>
 		<div class="tracking-smaller font-light text-zinc-700">
 			<p class="my-6">
-				{yx1[0].featureuno}
+				{markone[0].featureuno}
 			</p>
 			<p>
-				{yx1[0].featuresec}
+				{markone[0].featuresec}
 			</p>
 		</div>
 	</section>
@@ -124,24 +123,20 @@
 		<h2 class="uppercase font-bold text-2xl lg:text-3xl">In the box</h2>
 		<div class="flex flex-col gap-3 md:gap-2">
 			<div class="flex gap-x-4">
-				<p class="text-orange font-bold">{yx1[0].includes[0].quantity}x</p>
-				<p>{yx1[0].includes[0].item}</p>
+				<p class="text-orange font-bold">{markone[0].includes[0].quantity}x</p>
+				<p>{markone[0].includes[0].item}</p>
 			</div>
 			<div class="flex gap-x-4">
-				<p class="text-orange font-bold">{yx1[0].includes[1].quantity}x</p>
-				<p>{yx1[0].includes[1].item}</p>
+				<p class="text-orange font-bold">{markone[0].includes[1].quantity}x</p>
+				<p>{markone[0].includes[1].item}</p>
 			</div>
 			<div class="flex gap-x-4">
-				<p class="text-orange font-bold">{yx1[0].includes[2].quantity}x</p>
-				<p>{yx1[0].includes[2].item}</p>
+				<p class="text-orange font-bold">{markone[0].includes[2].quantity}x</p>
+				<p>{markone[0].includes[2].item}</p>
 			</div>
 			<div class="flex gap-x-4">
-				<p class="text-orange font-bold">{yx1[0].includes[3].quantity}x</p>
-				<p>{yx1[0].includes[3].item}</p>
-			</div>
-			<div class="flex gap-x-4">
-				<p class="text-orange font-bold">{yx1[0].includes[4].quantity}x</p>
-				<p>{yx1[0].includes[4].item}</p>
+				<p class="text-orange font-bold">{markone[0].includes[3].quantity}x</p>
+				<p>{markone[0].includes[3].item}</p>
 			</div>
 		</div>
 	</section>
@@ -151,20 +146,20 @@
 	>
 		<div class="flex flex-col gap-2 md:gap-[1.32rem] lg:gap-[1.6rem] xl-gap-[1.8rem]">
 			<enhanced:img
-				src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-1.jpg"
+				src="/src/lib/assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg"
 				class="rounded-md"
-				alt="yx1-earphones"
+				alt="xx99-mark-one-headphones"
 			/>
 			<enhanced:img
-				src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-2.jpg"
+				src="/src/lib/assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg"
 				class="rounded-md"
-				alt="yx1-earphones"
+				alt="xx99-mark-one-headphones"
 			/>
 		</div>
 		<enhanced:img
-			src="/src/lib/assets/product-yx1-earphones/desktop/image-gallery-3.jpg"
+			src="/src/lib/assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg"
 			class="rounded-md"
-			alt="yx1-earphones"
+			alt="xx99-mark-one-headphones"
 		/>
 	</section>
 	<!-- you may also like section -->
@@ -173,13 +168,13 @@
 		<div class="wrapper flex flex-col gap-5 md:gap-2 lg:gap-5 md:flex-row text-center">
 			<div class="flex flex-col gap-4">
 				<enhanced:img
-					src="/src/lib/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg"
+					src="/src/lib/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg"
 					class="rounded-md"
-					alt="xx99-mark-one-headphones"
+					alt="xx99-mark-two-headphones"
 				/>
-				<h3 class="font-bold text-2xl uppercase">{markone[0].short}</h3>
+				<h3 class="font-bold text-2xl uppercase">{marktwo[0].short}</h3>
 				<div class="block">
-					<a href="/headphones/markone">
+					<a href="/headphones/marktwo">
 						<SeeButton />
 					</a>
 				</div>
@@ -191,7 +186,7 @@
 					alt="xx59-headphones"
 				/>
 				<h3 class="font-bold text-2xl uppercase">{xx59[0].short}</h3>
-				<a href="/headphones/xx59">
+				<a href="http://">
 					<SeeButton />
 				</a>
 			</div>
@@ -202,9 +197,7 @@
 					alt="zx9-speaker"
 				/>
 				<h3 class="font-bold text-2xl uppercase">{zx9[0].short}</h3>
-				<a href="/speaker/zx9">
-					<SeeButton />
-				</a>
+				<a href="http://"> <SeeButton /> </a>
 			</div>
 		</div>
 	</section>
