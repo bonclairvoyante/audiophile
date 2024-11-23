@@ -1,15 +1,15 @@
 <div class="hero-image font-sans">
 	<section class="hero-bottom">
-		<p class="hero-bottom--new-product tracking-wide text-zinc-300">NEW PRODUCT</p>
-		<h1 class="hero-bottom--title text-white leading-10 text-5xl font-bold">
-			XX99 MARK II HEADPHONES
+		<p class="hero-bottom--new-product tracking-wide text-zinc-300 uppercase">new product</p>
+		<h1 class="hero-bottom--title text-white leading-10 text-5xl font-bold uppercase">
+			xx99 mark II headphones
 		</h1>
 		<p class="hero-bottom--paragraph text-zinc-300">
 			Experience natural, lifelike audio and exceptional build quality made for the passionate music
 			enthusiast.
 		</p>
 		<div class="md:block">
-			<button class="bg-orange hover:bg-orange-bright text-white px-4 py-4"> SEE PRODUCT </button>
+			<a href="/headphones/marktwo"><button class="bg-orange hover:bg-orange-bright text-white px-4 py-4 uppercase">see product</button></a>
 		</div>
 	</section>
 </div>

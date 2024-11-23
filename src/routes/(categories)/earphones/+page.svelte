@@ -1,9 +1,7 @@
-
-
-<main class="mx-4 md:mx-24 pb-2 lg:pb-12">
+<main class="mx-[3rem] mt-8 md:mt-12">
 	<!-- YX1 Wireless earphones -->
 	<section
-		class="flex flex-col lg:flex-row gap-4 lg:gap-8 text-center lg:text-start mt-8 md:mt-12 mb-36"
+		class="flex flex-col lg:flex-row gap-4 lg:gap-8 text-center lg:text-start pb-10 md:pb-14 lg:pb-20"
 	>
 		<enhanced:img
 			src="/src/lib/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"

@@ -54,7 +54,7 @@
 	</section>
 	<!-- XX59 Headphones -->
 	<section
-		class="flex flex-col lg:flex-row gap-4 lg:gap-16 text-center lg:text-start mt-8 md:mt-12 mb-36 lg:mb-56"
+		class="flex flex-col lg:flex-row gap-4 lg:gap-16 text-center lg:text-start mt-8 md:mt-12 mb-40"
 	>
 		<enhanced:img
 			src="/src/lib/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg"

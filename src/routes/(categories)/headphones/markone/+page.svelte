@@ -3,6 +3,7 @@
 	import GoBack from '$lib/components/GoBack.svelte';
 	import { marktwo, markone, xx59, zx9 } from '$lib/data/productdetails.json';
 	import clsx from 'clsx';
+	import { goto } from '$app/navigation';
 	import SeeButton from '$lib/components/SeeButton.svelte';
 
 	let {
@@ -16,6 +17,10 @@
 	let input: HTMLInputElement;
 
 	let showCaret = $state(true);
+
+	const handleClick = () => {
+		goto('/headphones', {replaceState: true});
+	};
 
 	function handleInput() {
 		let next = value;
@@ -41,12 +46,12 @@
 
 <main class="mx-[1.51rem] mb-24">
 	<!-- Card section -->
-	<div class="p-4">
+	<button onclick={handleClick} class="p-4">
 		<GoBack />
-	</div>
+	</button>
 	<section class="p-3 md:p-4 lg:p-5 flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-10 text-start">
 		<enhanced:img
-			src="/src/lib/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg"
+			src="/src/lib/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg"
 			class="rounded-md"
 			alt="yx1-earphones"
 		/>
@@ -61,7 +66,7 @@
 					class="focus-within:ring-accent group flex items-stretch text-3xl font-semibold bg-white-grey"
 				>
 					<button
-						aria-hidden="true"
+						aria-hidden="false"
 						tabindex={-1}
 						class="flex items-center pl-[.5em] pr-[.325em] hover:text-orange-bright active:text-orange"
 						disabled={min != null && value <= min}
@@ -90,7 +95,7 @@
 						/>
 					</div>
 					<button
-						aria-hidden="true"
+						aria-hidden="false"
 						tabindex="-1"
 						class="flex items-center pl-[.325em] pr-[.5em] hover:text-orange-bright active:text-orange"
 						disabled={max != null && value >= max}
@@ -99,7 +104,7 @@
 						<Plus class="size-4" absoluteStrokeWidth strokeWidth="3.5" />
 					</button>
 				</div>
-				<button class="bg-orange hover:bg-orange-bright w-[9rem] py-3 text-white text-nowrap"
+				<button class="bg-orange hover:bg-orange-bright w-40 lg:w-48 py-3 text-white text-nowrap"
 					>Add to Cart</button
 				>
 			</div>
@@ -142,9 +147,9 @@
 	</section>
 	<!-- Gallery -->
 	<section
-		class="flex flex-col gap-2 md:gap-[1rem] lg:gap-[1.4rem] md:flex-row pb-4 md:pb-8 lg:pb-12 justify-center xl:gap-[2rem]"
+		class="flex flex-col gap-2 md:gap-[1rem] lg:gap-[1.4rem] md:flex-row pb-4 md:pb-8 lg:pb-12 items-center xl:gap-[2rem]"
 	>
-		<div class="flex flex-col gap-2 md:gap-[1.32rem] lg:gap-[1.6rem] xl-gap-[1.8rem]">
+		<div class="flex flex-col gap-2 md:gap-[1.32rem] lg:gap-[1.6rem] xl:gap-[2rem]">
 			<enhanced:img
 				src="/src/lib/assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg"
 				class="rounded-md"
@@ -164,11 +169,11 @@
 	</section>
 	<!-- you may also like section -->
 	<section class="pb-12 md:pb-16 lg:pb-24">
-		<h2 class="uppercase font-bold text-2xl lg:text-3xl py-8">You may also like</h2>
+		<h2 class="uppercase font-bold text-2xl lg:text-3xl py-8 md:text-center">You may also like</h2>
 		<div class="wrapper flex flex-col gap-5 md:gap-2 lg:gap-5 md:flex-row text-center">
 			<div class="flex flex-col gap-4">
 				<enhanced:img
-					src="/src/lib/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg"
+					src="/src/lib/assets/product-xx99-mark-two-headphones/mobile/image-product.jpg"
 					class="rounded-md"
 					alt="xx99-mark-two-headphones"
 				/>
@@ -186,7 +191,7 @@
 					alt="xx59-headphones"
 				/>
 				<h3 class="font-bold text-2xl uppercase">{xx59[0].short}</h3>
-				<a href="http://">
+				<a href="/headphones/xx59">
 					<SeeButton />
 				</a>
 			</div>
@@ -197,7 +202,7 @@
 					alt="zx9-speaker"
 				/>
 				<h3 class="font-bold text-2xl uppercase">{zx9[0].short}</h3>
-				<a href="http://"> <SeeButton /> </a>
+				<a href="/speakers/zx9"> <SeeButton /> </a>
 			</div>
 		</div>
 	</section>
