@@ -44,7 +44,7 @@
 	}
 </script>
 
-<main class="mx-[1.51rem] mb-24">
+<main class="mx-[1.51rem] md:mx-[1em] mb-24">
 	<!-- Card section -->
 	<button onclick={handleClick} class="p-4">
 		<GoBack />

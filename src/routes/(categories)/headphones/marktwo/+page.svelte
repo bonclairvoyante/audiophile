@@ -6,7 +6,6 @@
 	import clsx from 'clsx';
 	import SeeButton from '$lib/components/SeeButton.svelte';
 
-	
 	let {
 		min = 0,
 		max = 99,
@@ -20,7 +19,7 @@
 	let showCaret = $state(true);
 
 	const handleClick = function () {
-		goto('/headphones', {replaceState: true});
+		goto('/headphones', { replaceState: true });
 	};
 
 	function handleInput() {
@@ -45,7 +44,7 @@
 	}
 </script>
 
-<main class="mx-[1.51rem] mb-24">
+<main class="mx-[1.51rem] md:mx-[1em] mb-24">
 	<!-- Card section -->
 	<button onclick={handleClick} class="p-4">
 		<GoBack />
