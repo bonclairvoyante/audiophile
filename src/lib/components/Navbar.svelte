@@ -1,6 +1,8 @@
 <script lang="ts">
-	import Cart from './Cart.svelte';
+	import CartIcon from './CartIcon.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
+	import { cartOpen } from '$lib/cart.svelte';
+	import CartItem from './CartItem.svelte';
 
 	import { fly } from 'svelte/transition';
 	import { quadInOut, quadOut } from 'svelte/easing';
@@ -78,6 +80,8 @@
 	</ul>
 
 	{#if !open}
-		<Cart />
+		<div>
+			<CartIcon />
+		</div>
 	{/if}
 </nav>
