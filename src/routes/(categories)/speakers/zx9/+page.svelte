@@ -108,18 +108,17 @@
 						<Plus class="size-4" absoluteStrokeWidth strokeWidth="3.5" />
 					</button>
 				</div>
-				<button class="bg-orange hover:bg-orange-bright w-40 lg:w-48 py-3 text-white text-nowrap"
-				onclick={
-					()=>{
+				<button
+					class="bg-orange hover:bg-orange-bright w-40 lg:w-48 py-3 text-white text-nowrap"
+					onclick={() => {
 						cartProducts.push({
 							id: crypto.randomUUID(),
 							name: zx9[0].name,
 							quantity: value,
-							price: zx9[0].price
-						})
-					}
-				}
-					>Add to Cart</button
+							price: zx9[0].price,
+							thumbmail: zx9[0].thumbnail
+						});
+					}}>Add to Cart</button
 				>
 			</div>
 		</div>

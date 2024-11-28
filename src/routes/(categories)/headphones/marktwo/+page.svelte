@@ -113,7 +113,8 @@
 							id: crypto.randomUUID(),
 							name: marktwo[0].name,
 							quantity: value,
-							price: marktwo[0].price
+							price: marktwo[0].price,
+							thumbmail: marktwo[0].thumbnail
 						});
 					}}>Add to Cart</button
 				>

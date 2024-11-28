@@ -112,7 +112,8 @@
 							id: crypto.randomUUID(),
 							name: markone[0].name,
 							quantity: value,
-							price: markone[0].price
+							price: markone[0].price,
+							thumbmail: markone[0].thumbnail
 						});
 					}}>Add to Cart</button
 				>

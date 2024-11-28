@@ -3,4 +3,5 @@ export type CartProduct = {
 	name: string;
 	quantity: number;
 	price: number;
+	thumbmail: string;
 };

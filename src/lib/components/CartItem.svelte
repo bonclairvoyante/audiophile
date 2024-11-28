@@ -17,7 +17,7 @@
 <div class="flex items-center justify-between py-2 border-b border-gray-200">
 	<div class="flex items-center">
 		<img
-			src="https://via.placeholder.com/50"
+			src="{cartProduct.thumbmail}"
 			alt="Product"
 			class="size-12 object-cover rounded mr-4"
 		/>

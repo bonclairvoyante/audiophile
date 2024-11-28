@@ -114,7 +114,8 @@
 							id: crypto.randomUUID(),
 							name: yx1[0].name,
 							quantity: value,
-							price: yx1[0].price
+							price: yx1[0].price,
+							thumbmail: yx1[0].thumbnail
 						});
 					}}>Add to Cart</button
 				>
