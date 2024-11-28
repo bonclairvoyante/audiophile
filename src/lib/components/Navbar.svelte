@@ -6,6 +6,7 @@
 
 	import { fly } from 'svelte/transition';
 	import { quadInOut, quadOut } from 'svelte/easing';
+	import type { CartProduct } from '$lib/types';
 
 	let open = $state(false);
 	let transitionParams = {
@@ -14,6 +15,8 @@
 		easing: quadInOut
 	};
 	let cartOpen = $state(false);
+
+	
 </script>
 
 <nav
@@ -88,8 +91,8 @@
 		>
 			<CartIcon />
 			{#if cartOpen}
-				{#each cartProducts as cartProduct}
-					<CartItem {cartProduct} />
+				{#each cartProducts as _, i}
+					<CartItem bind:cartProduct={cartProducts[i]} />
 				{/each}
 			{/if}
 		</button>

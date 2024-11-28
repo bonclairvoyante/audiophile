@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Plus, Minus } from 'lucide-svelte';
+
 	import GoBack from '$lib/components/GoBack.svelte';
 	import { yx1, markone, xx59, zx9 } from '$lib/data/productdetails.json';
 	import clsx from 'clsx';
