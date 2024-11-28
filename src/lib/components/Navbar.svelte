@@ -15,8 +15,6 @@
 		easing: quadInOut
 	};
 	let cartOpen = $state(false);
-
-	
 </script>
 
 <nav
@@ -91,8 +89,8 @@
 		>
 			<CartIcon />
 			{#if cartOpen}
-				{#each cartProducts as _, i}
-					<CartItem bind:cartProduct={cartProducts[i]} />
+				{#each cartProducts as cartProduct}
+					<CartItem {cartProduct} />
 				{/each}
 			{/if}
 		</button>
