@@ -1,5 +1,11 @@
-<script>
-    import { Plus, Minus, Trash } from "lucide-svelte";
+<script lang="ts">
+	import type { CartProduct } from '$lib/types';
+	import { Plus, Minus, Trash } from 'lucide-svelte';
+	type Props = {
+		cartProduct: CartProduct;
+	};
+
+	let { cartProduct =$bindable() }: Props = $props();
 </script>
 
 <div class="flex items-center justify-between py-2 border-b border-gray-200">
@@ -10,20 +16,20 @@
 			class="size-12 object-cover rounded mr-4"
 		/>
 		<div>
-			<p class="font-medium">Product Name</p>
-			<p class="text-sm">$19.99 each</p>
+			<p class="font-medium">{cartProduct.name}</p>
+			<p class="text-sm">$ {cartProduct.price}</p>
 		</div>
 	</div>
 	<div class="flex items-center">
 		<button class="p-1 hover:bg-gray-200 rounded" aria-label="Subtract 1 from quantity">
-			<Minus size=12 />
+			<Minus size="12" />
 		</button>
-		<span class="mx-2">2</span>
+		<span class="mx-2">{cartProduct.quantity}</span>
 		<button class="p-1 hover:bg-gray-200 rounded" aria-label="Add 1 to quantity">
-			<Plus size=12 />
+			<Plus size="12" />
 		</button>
 		<button class="ml-4 p-1 text-red-500 hover:bg-red-100 rounded">
-			<Trash size=12 />
+			<Trash size="12" />
 		</button>
 	</div>
 </div>

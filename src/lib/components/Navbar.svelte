@@ -1,8 +1,8 @@
 <script lang="ts">
 	import CartIcon from './CartIcon.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
-	import { cartOpen } from '$lib/cart.svelte';
 	import CartItem from './CartItem.svelte';
+	import { cartProducts } from '$lib/cart.svelte';
 
 	import { fly } from 'svelte/transition';
 	import { quadInOut, quadOut } from 'svelte/easing';
@@ -13,6 +13,7 @@
 		duration: 200,
 		easing: quadInOut
 	};
+	let cartOpen = $state(false);
 </script>
 
 <nav
@@ -80,8 +81,17 @@
 	</ul>
 
 	{#if !open}
-		<div>
+		<button
+			onclick={() => {
+				cartOpen = !cartOpen;
+			}}
+		>
 			<CartIcon />
-		</div>
+			{#if cartOpen}
+				{#each cartProducts as cartProduct}
+					<CartItem {cartProduct} />
+				{/each}
+			{/if}
+		</button>
 	{/if}
 </nav>

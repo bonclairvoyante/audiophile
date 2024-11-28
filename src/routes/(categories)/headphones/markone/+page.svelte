@@ -5,6 +5,7 @@
 	import clsx from 'clsx';
 	import { goto } from '$app/navigation';
 	import SeeButton from '$lib/components/SeeButton.svelte';
+	import { cartProducts } from '$lib/cart.svelte';
 
 	let {
 		min = 0,
@@ -19,7 +20,7 @@
 	let showCaret = $state(true);
 
 	const handleClick = () => {
-		goto('/headphones', {replaceState: true});
+		goto('/headphones', { replaceState: true });
 	};
 
 	function handleInput() {
@@ -104,8 +105,16 @@
 						<Plus class="size-4" absoluteStrokeWidth strokeWidth="3.5" />
 					</button>
 				</div>
-				<button class="bg-orange hover:bg-orange-bright w-40 lg:w-48 py-3 text-white text-nowrap"
-					>Add to Cart</button
+				<button
+					class="bg-orange hover:bg-orange-bright w-40 lg:w-48 py-3 text-white text-nowrap"
+					onclick={() => {
+						cartProducts.push({
+							id: crypto.randomUUID(),
+							name: markone[0].name,
+							quantity: value,
+							price: markone[0].price
+						});
+					}}>Add to Cart</button
 				>
 			</div>
 		</div>

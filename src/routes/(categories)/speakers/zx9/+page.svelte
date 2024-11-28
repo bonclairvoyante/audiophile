@@ -5,6 +5,7 @@
 	import { goto, replaceState } from '$app/navigation';
 	import clsx from 'clsx';
 	import SeeButton from '$lib/components/SeeButton.svelte';
+	import { cartProducts } from '$lib/cart.svelte';
 
 	let {
 		min = 0,
@@ -108,6 +109,16 @@
 					</button>
 				</div>
 				<button class="bg-orange hover:bg-orange-bright w-40 lg:w-48 py-3 text-white text-nowrap"
+				onclick={
+					()=>{
+						cartProducts.push({
+							id: crypto.randomUUID(),
+							name: zx9[0].name,
+							quantity: value,
+							price: zx9[0].price
+						})
+					}
+				}
 					>Add to Cart</button
 				>
 			</div>

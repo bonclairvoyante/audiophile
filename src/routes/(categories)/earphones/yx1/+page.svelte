@@ -110,8 +110,10 @@
 					class="bg-orange hover:bg-orange-bright w-40 lg:w-48 py-3 text-white text-nowrap"
 					onclick={() => {
 						cartProducts.push({
+							id: crypto.randomUUID(),
 							name: yx1[0].name,
-							quantity: value
+							quantity: value,
+							price: yx1[0].price
 						});
 					}}>Add to Cart</button
 				>
