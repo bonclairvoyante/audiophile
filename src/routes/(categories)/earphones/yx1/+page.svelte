@@ -115,7 +115,7 @@
 							name: yx1[0].name,
 							quantity: value,
 							price: yx1[0].price,
-							thumbmail: yx1[0].thumbnail
+							thumbmail: "/src/lib/assets/cart/image-yx1-earphones.jpg"
 						});
 					}}>Add to Cart</button
 				>

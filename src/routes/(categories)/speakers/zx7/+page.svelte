@@ -115,7 +115,7 @@
 							name: zx7[0].name,
 							quantity: value,
 							price: zx7[0].price,
-							thumbmail: zx7[0].thumbnail
+							thumbmail: '/src/lib/assets/cart/image-zx7-speaker.jpg'
 						});
 					}}>Add to Cart</button
 				>
