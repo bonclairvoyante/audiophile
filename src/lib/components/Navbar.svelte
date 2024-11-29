@@ -5,8 +5,6 @@
 	import { quadInOut, quadOut } from 'svelte/easing';
 	import { cartProducts } from '$lib/cart.svelte';
 
-	let closed = $state(true);
-
 	const cartQuantity = $derived.by(() => {
 		let total = 0;
 		for (const product of cartProducts) {
@@ -47,9 +45,8 @@
 				</div>
 			</div>
 		</div>
-		{#if closed}
-			<p class="text-xl font-bold md:text-3xl pl-12">audiophile</p>
-		{/if}
+
+		<p class="text-xl font-bold md:text-3xl pl-12">audiophile</p>
 	</div>
 
 	<ul class="lg:flex gap-6 hidden p-5">
@@ -65,32 +62,23 @@
 		</li>
 	</ul>
 
-	<button
-		onclick={() => {
-			closed = !closed;
-		}}
-	>
+	<div>
 		<div class="drawer drawer-end">
 			<input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
 			<div class="drawer-content">
 				<!-- Page content here -->
 				<label for="my-drawer-4" class="drawer-button">
-					<div>
-						<div class="badge badge-secondary badge-xs">{cartQuantity}</div>
-
-						<CartIcon />
-					</div>
+					<div class="badge badge-secondary badge-xs absolute -top-2 -right-1">{cartQuantity}</div>
+					<CartIcon />
 				</label>
 			</div>
-			<div class="drawer-side">
+			<div class="drawer-side -px-8">
 				<label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-				<ul class="menu bg-base-200 text-base-content min-h-64 w-80 p-4">
+				<div class="menu bg-base-200 text-base-content min-h-56 w-80 p-4">
 					<!-- Sidebar content here -->
-					<li>
-						<Cart />
-					</li>
-				</ul>
+					<Cart />
+				</div>
 			</div>
 		</div>
-	</button>
+	</div>
 </nav>
