@@ -34,7 +34,7 @@
 				<div class="drawer-side">
 					<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
 					<ul
-						class="menu bg-base-200 text-base-content min-h-full w-56 md:w-80 p-4"
+						class="menu bg-base-200 text-base-content min-h-48 w-56 md:w-80 p-4"
 						
 					>
 						<!-- Sidebar content here -->
@@ -90,7 +90,7 @@
 			</div>
 			<div class="drawer-side">
 				<label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-				<ul class="menu bg-base-200 text-base-content min-h-full w-64 md:w-80 p-4">
+				<ul class="menu bg-base-200 text-base-content min-h-64 w-56 md:w-80 p-4">
 					<!-- Sidebar content here -->
 					<li>
 						<Cart />
