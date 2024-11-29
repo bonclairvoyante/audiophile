@@ -23,7 +23,7 @@
 		/>
 		<div>
 			<p class="font-medium">{cartProduct.name}</p>
-			<p class="text-sm">$ {cartProduct.price}</p>
+			<p class="text-sm">$ {cartProduct.price * cartProduct.quantity}</p>
 		</div>
 	</div>
 	<div class="flex items-center">

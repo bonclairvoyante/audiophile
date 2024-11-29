@@ -1,10 +1,10 @@
 import type { Config } from 'tailwindcss';
+import daisyui from 'daisyui';
 
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		letterSpacing: {
-			
 			small: '0.25em',
 			smaller: '0.125',
 			wide: '0.5em',
@@ -37,5 +37,8 @@ export default {
 			}
 		}
 	},
-	plugins: []
+	daisyui: {
+		themes: ['bumblebee']
+	},
+	plugins: [daisyui]
 } as Config;
