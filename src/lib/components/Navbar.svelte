@@ -6,16 +6,14 @@
 	import { cartProducts } from '$lib/cart.svelte';
 
 	let closed = $state(true);
-	
-	const cartQuantity = $derived.by(()=>{
+
+	const cartQuantity = $derived.by(() => {
 		let total = 0;
-		for (const product of cartProducts){
-			total += product.quantity
+		for (const product of cartProducts) {
+			total += product.quantity;
 		}
-		return total
-			
-		}
-	)
+		return total;
+	});
 </script>
 
 <nav
@@ -33,10 +31,7 @@
 				</div>
 				<div class="drawer-side">
 					<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-					<ul
-						class="menu bg-base-200 text-base-content min-h-48 w-56 md:w-80 p-4"
-						
-					>
+					<ul class="menu bg-base-200 text-base-content min-h-48 w-56 md:w-80 p-4">
 						<!-- Sidebar content here -->
 						<li><a class="hover:text-orange-bright uppercase" href="/">Home</a></li>
 						<li>
@@ -81,16 +76,15 @@
 				<!-- Page content here -->
 				<label for="my-drawer-4" class="drawer-button">
 					<div>
-						
-							<div class="badge badge-secondary badge-xs">{cartQuantity}</div>
-						
+						<div class="badge badge-secondary badge-xs">{cartQuantity}</div>
+
 						<CartIcon />
 					</div>
 				</label>
 			</div>
 			<div class="drawer-side">
 				<label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-				<ul class="menu bg-base-200 text-base-content min-h-64 w-56 md:w-80 p-4">
+				<ul class="menu bg-base-200 text-base-content min-h-64 w-80 p-4">
 					<!-- Sidebar content here -->
 					<li>
 						<Cart />
