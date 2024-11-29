@@ -2,8 +2,8 @@
 	import CartIcon from './CartIcon.svelte';
 	import Cart from './Cart.svelte';
 	import { Menu, X } from 'lucide-svelte';
-	import { quadInOut, quadOut } from 'svelte/easing';
 	import { cartProducts } from '$lib/cart.svelte';
+	import { fade, fly } from 'svelte/transition';
 
 	const cartQuantity = $derived.by(() => {
 		let total = 0;
@@ -29,7 +29,7 @@
 				</div>
 				<div class="drawer-side">
 					<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-					<ul class="menu bg-base-200 text-base-content min-h-48 w-56 md:w-80 p-4">
+					<ul class="menu bg-base-200 text-base-content min-h-48 w-56 md:w-80 p-4" >
 						<!-- Sidebar content here -->
 						<li><a class="hover:text-orange-bright uppercase" href="/">Home</a></li>
 						<li>
@@ -46,7 +46,7 @@
 			</div>
 		</div>
 
-		<p class="text-xl font-bold md:text-3xl pl-12">audiophile</p>
+		<a href="/"><p class="text-xl font-bold md:text-3xl">audiophile</p></a>
 	</div>
 
 	<ul class="lg:flex gap-6 hidden p-5">

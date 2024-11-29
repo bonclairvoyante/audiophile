@@ -1,6 +1,13 @@
+<script lang="ts">
+	import { quadOut } from 'svelte/easing';
+	import { fade, fly, slide } from 'svelte/transition';
+</script>
+
 <main class="mx-4 md:mx-24">
 	<!-- xx99 Mark II -->
 	<section
+		in:fly={{ x: 200, duration: 1000 }}
+		out:slide={{ delay: 200, easing: quadOut }}
 		class="flex flex-col lg:flex-row gap-4 lg:gap-10 text-center lg:text-start mt-8 md:mt-12 mb-24"
 	>
 		<enhanced:img
@@ -39,9 +46,11 @@
 				and on the go.
 			</p>
 			<div class="block">
-				<a href="/headphones/markone"><button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase"
-					>see product</button
-				></a>
+				<a href="/headphones/markone"
+					><button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase"
+						>see product</button
+					></a
+				>
 			</div>
 		</div>
 		<div>
@@ -70,9 +79,12 @@
 				home or on the move.
 			</p>
 			<div class="block">
-				<a href="/headphones/xx59"><button class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase shadow-2xl"
-					>see product</button
-				></a>
+				<a href="/headphones/xx59"
+					><button
+						class="bg-orange hover:bg-orange-bright text-white py-4 px-4 uppercase shadow-2xl"
+						>see product</button
+					></a
+				>
 			</div>
 		</div>
 	</section>

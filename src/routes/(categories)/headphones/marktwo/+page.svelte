@@ -114,7 +114,7 @@
 							name: marktwo[0].name,
 							quantity: value,
 							price: marktwo[0].price,
-							thumbmail: "/src/lib/assets/cart/image-xx99-mark-two-headphones.jpg"
+							thumbmail: "/assets/cart/image-xx99-mark-two-headphones.jpg"
 						});
 					}}>Add to Cart</button
 				>

@@ -113,7 +113,7 @@
 							name: markone[0].name,
 							quantity: value,
 							price: markone[0].price,
-							thumbmail: "/src/lib/assets/cart/image-xx99-mark-one-headphones.jpg"
+							thumbmail: "/assets/cart/image-xx99-mark-one-headphones.jpg"
 						});
 					}}>Add to Cart</button
 				>
