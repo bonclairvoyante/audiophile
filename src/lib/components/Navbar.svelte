@@ -1,8 +1,8 @@
 <script lang="ts">
 	import CartIcon from './CartIcon.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
-	import CartItem from './CartItem.svelte';
-	import { cartProducts } from '$lib/cart.svelte';
+	import Cart from './Cart.svelte';
+	import { X } from 'lucide-svelte';
 
 	import { fly } from 'svelte/transition';
 	import { quadInOut, quadOut } from 'svelte/easing';
@@ -21,7 +21,7 @@
 	class="flex justify-between items-center bg-charcoal text-white px-6 lg:px-[7rem] xl:px-[10rem] py-3 md:py-5"
 >
 	<div class="flex gap-3 md:gap-8 justify-center items-center">
-		<div class="lg:hidden pt-2">
+		<div class="lg:hidden p-2 absolute top-5 left-0 bg-charcoal">
 			<Hamburger
 				bind:open
 				type="spring-r"
@@ -36,7 +36,7 @@
 			/>
 			{#if open}
 				<ul
-					class="flex flex-col gap-6 pt-6"
+					class="flex flex-col gap-6 p-6 w-96 h-[100vh]"
 					transition:fly={{
 						delay: 100,
 						duration: 700,
@@ -64,7 +64,7 @@
 			{/if}
 		</div>
 		{#if !open}
-			<p class="text-xl font-bold md:text-3xl">audiophile</p>
+			<p class="text-xl font-bold md:text-3xl pl-12">audiophile</p>
 		{/if}
 	</div>
 
@@ -89,9 +89,9 @@
 		>
 			<CartIcon />
 			{#if cartOpen}
-				{#each cartProducts as cartProduct}
-					<CartItem {cartProduct} />
-				{/each}
+				<div class="absolute right-2 top-5 bg-charcoal w-96 h-[100vh]">
+					<Cart />
+				</div>
 			{/if}
 		</button>
 	{/if}
