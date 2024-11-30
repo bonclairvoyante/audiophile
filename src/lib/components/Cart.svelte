@@ -12,9 +12,13 @@
 	});
 </script>
 
-{#each cartProducts as cartProduct}
-	<CartItem {cartProduct} />
-{/each}
+{#if cartProducts.length === 0}
+	<p>Your cart cannot be empty 🙂‍↔️</p>
+{:else}
+	{#each cartProducts as cartProduct}
+		<CartItem {cartProduct} />
+	{/each}
+{/if}
 
 <div class="divider"></div>
 <div class="flex justify-between items-center p-2 font-bold">
@@ -23,5 +27,7 @@
 </div>
 
 <a href="/" class="text-center"
-	><button class="btn btn-block hover:bg-orange-bright bg-orange uppercase rounded-none">checkout</button></a
+	><button class="btn btn-block hover:bg-orange-bright bg-orange uppercase rounded-none"
+		>checkout</button
+	></a
 >

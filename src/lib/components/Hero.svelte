@@ -1,5 +1,11 @@
+<script lang="ts">
+	import { scale } from "svelte/transition";
+	import { quadIn, quadOut, quintInOut } from "svelte/easing";
+
+</script>
+
 <div class="hero-image font-sans">
-	<section class="hero-bottom">
+	<section transition:scale={{ delay: 200, duration: 1000, easing: quintInOut}} class="hero-bottom">
 		<p class="hero-bottom--new-product tracking-wide text-zinc-300 uppercase">new product</p>
 		<h1 class="hero-bottom--title text-white leading-10 text-5xl font-bold uppercase">
 			xx99 mark II headphones

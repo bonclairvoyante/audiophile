@@ -1,13 +1,13 @@
 <script>
 	import SeeButton from '$lib/components/SeeButton.svelte';
-	import { quadOut } from 'svelte/easing';
+	import { quintIn, quintOut } from 'svelte/easing';
 	import { fade, fly, slide } from 'svelte/transition';
 </script>
 
 <main class="mx-4 md:mx-24">
 	<!-- ZX9 Speaker -->
-	<section in:fly={{ delay: 200, duration: 1000 }}
-		out:slide={{ delay: 200}}
+	<section in:slide={{ delay: 500, duration: 750, easing: quintIn}} out:slide={{easing:quintOut}}
+		
 		class="flex flex-col lg:flex-row gap-4 lg:gap-10 text-center lg:text-start mt-8 md:mt-12 mb-24 lg"
 	>
 		<enhanced:img

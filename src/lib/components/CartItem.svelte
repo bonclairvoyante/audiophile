@@ -1,16 +1,13 @@
 <script lang="ts">
-	import { cartProducts } from '$lib/cart.svelte';
+	import { removeFromCart } from '$lib/cart.svelte';
 	import type { CartProduct } from '$lib/types';
 	import { Plus, Minus, Trash } from 'lucide-svelte';
-	import { removeFromCart } from '$lib/cart.svelte';
+
 	type Props = {
 		cartProduct: CartProduct;
-		
 	};
 
-	let { cartProduct = $bindable() }: Props = $props();
-
-	
+	let { cartProduct }: Props = $props();
 </script>
 
 <div class="flex items-center justify-between py-2 border-b border-gray-200">
@@ -24,7 +21,9 @@
 	<div class="flex items-center">
 		<button
 			onclick={() => {
-				if (cartProduct.quantity > 1) {
+				if (cartProduct.quantity === 1) {
+					removeFromCart(cartProduct.id);
+				} else {
 					cartProduct.quantity--;
 				}
 			}}
@@ -44,10 +43,10 @@
 			<Plus size="12" />
 		</button>
 		<button
-			class="ml-4 p-1 text-red-500 hover:bg-red-100 rounded"
 			onclick={() => {
-				removeFromCart;
+				removeFromCart(cartProduct.id);
 			}}
+			class="ml-4 p-1 text-orange hover:bg-orange-bright rounded"
 		>
 			<Trash size="12" />
 		</button>

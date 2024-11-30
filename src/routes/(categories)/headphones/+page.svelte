@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { quadOut } from 'svelte/easing';
-	import { fade, fly, slide } from 'svelte/transition';
+	import { quadOut, quartIn, quartInOut } from 'svelte/easing';
+	import { scale } from 'svelte/transition';
 </script>
 
 <main class="mx-4 md:mx-24">
 	<!-- xx99 Mark II -->
 	<section
-		in:fly={{ x: 200, duration: 1000 }}
-		out:slide={{ delay: 200, easing: quadOut }}
+		in:scale={{duration: 1000, easing: quartIn}} out:scale
+		
 		class="flex flex-col lg:flex-row gap-4 lg:gap-10 text-center lg:text-start mt-8 md:mt-12 mb-24"
 	>
 		<enhanced:img
