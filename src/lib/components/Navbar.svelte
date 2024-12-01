@@ -67,13 +67,19 @@
 			<div class="drawer-content">
 				<!-- Page content here -->
 				<label for="my-drawer-4" class="drawer-button">
-					<div class="badge badge-secondary badge-xs absolute -top-2 -right-1">{cartQuantity}</div>
-					<CartIcon />
+					<div
+						class="bg-orange hover:bg-orange-bright rounded-xl px-4 py-1 flex justify-between items-center gap-x-2"
+					>
+						<CartIcon />
+						<div class="badge badge-xs {cartQuantity > 0 ? 'badge-primary' : 'badge-secondary'}">
+							{cartQuantity}
+						</div>
+					</div>
 				</label>
 			</div>
 			<div class="drawer-side -px-8">
 				<label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-				<div class="menu bg-base-300 text-base-content min-h-96 w-96 md:w-80 p-4">
+				<div class="menu bg-base-300 text-base-content min-h-96 w-96 p-4">
 					<!-- Sidebar content here -->
 					<Cart />
 				</div>

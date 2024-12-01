@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CartItem from './CartItem.svelte';
 	import { cartProducts } from '$lib/cart.svelte';
-	import { X } from 'lucide-svelte';
+
 	import Link from './Link.svelte';
 
 	const cartTotal = $derived.by(() => {
@@ -13,18 +13,21 @@
 	});
 </script>
 
-<section class="">
-	<div class="">
+<section>
+	<div>
 		{#if cartProducts.length === 0}
 			<div class="flex flex-col justify-center items-center gap-7 pt-5">
 				<p class="text-zinc-600">Your cart cannot be empty 🙂‍↔️</p>
-				<a href="/" class="capitalize flex gap-x-1 pt-4 text-black hover:text-orange underline underline-offset-8"
+				<a
+					href="/"
+					class="capitalize flex gap-x-1 pt-4 text-black hover:text-orange underline underline-offset-8"
 					>Start Shopping
-					<Link /> </a
-				>
+					<Link />
+				</a>
 			</div>
 		{:else}
 			<p class="text-center font-sans text-xl font-bold">Your Cart</p>
+
 			{#each cartProducts as cartProduct}
 				<CartItem {cartProduct} />
 			{/each}
