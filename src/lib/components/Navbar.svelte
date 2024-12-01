@@ -14,7 +14,7 @@
 </script>
 
 <nav
-	class="sticky top-0 flex justify-between items-center bg-charcoal text-white px-6 lg:px-[7rem] xl:px-[10rem] py-3 md:py-5"
+	class="flex justify-between items-center bg-charcoal text-white px-6 lg:px-[7rem] xl:px-[10rem] py-3 md:py-5"
 >
 	<div class="flex gap-3 md:gap-8 justify-center items-center">
 		<div class="lg:hidden">

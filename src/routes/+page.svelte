@@ -79,14 +79,14 @@
 	</article>
 
 	<!-- XY1 Earphones -->
-	<article class="grid grid-cols-2 flex-col md:flex-row mt-10 gap-3 mb-16">
+	<article class="grid md:grid-cols-2 mt-10 gap-3 mb-16">
 		<enhanced:img
 			src="/src/lib/assets/home/desktop/image-earphones-yx1.jpg"
 			alt="YX1 Earphones"
 			class="rounded-lg"
 		/>
 		<div
-			class="flex flex-col justify-center items-center gap-3 text-center bg-white-grey rounded-lg"
+			class="flex flex-col justify-center items-center gap-3 text-center bg-white-grey rounded-lg py-6"
 		>
 			<p class="font-bold text-3xl mb-8">XY1 EARPHONES</p>
 			<a href="/earphones/yx1"><ButtonClear /></a>
