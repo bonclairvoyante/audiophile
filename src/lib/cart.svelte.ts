@@ -8,3 +8,4 @@ export function removeFromCart(id: string) {
 		cartProducts.splice(index, 1);
 	}
 }
+
