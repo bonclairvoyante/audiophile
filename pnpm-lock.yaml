@@ -23,6 +23,12 @@ importers:
       lucide-svelte:
         specifier: ^0.453.0
         version: 0.453.0(svelte@5.2.7)
+      runed:
+        specifier: ^0.16.1
+        version: 0.16.1(svelte@5.2.7)
+      svelte-use-persist:
+        specifier: ^0.7.0
+        version: 0.7.0(svelte@5.2.7)
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^3.0.0
@@ -1393,6 +1399,11 @@ packages:
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
 
+  runed@0.16.1:
+    resolution: {integrity: sha512-k9ylt7sfEQiqOo2FmuilkLSk92pDzMSeVHFb8aPJGFPQPG9ErUxhfcHQwnmUhT03F8oQeO6bKB/TDoPKhdXbTA==}
+    peerDependencies:
+      svelte: ^5.0.0-next.1
+
   sade@1.8.1:
     resolution: {integrity: sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A==}
     engines: {node: '>=6'}
@@ -1491,6 +1502,17 @@ packages:
     resolution: {integrity: sha512-T6mqZrySltPCDwfKXWQ6zehipVLk4GWfH1zCMGgRtLlOIFPuw58ZxVYxVvotMJgJaurKi1i14viB2GIRKXeJTQ==}
     peerDependencies:
       svelte: ^3.0.0 || ^4.0.0 || ^5.0.0-next.1
+
+  svelte-persisted-store@0.11.0:
+    resolution: {integrity: sha512-9RgJ5DrawGyyfK22A80cfu8Jose3CV8YjEZKz9Tn94rQ0tWyEmYr+XI+wrVF6wjRbW99JMDSVcFRiM3XzVJj/w==}
+    engines: {node: '>=0.14'}
+    peerDependencies:
+      svelte: ^3.48.0 || ^4.0.0 || ^5.0.0-next.0
+
+  svelte-use-persist@0.7.0:
+    resolution: {integrity: sha512-+cx/nAvnjuTjewHD9oNgMQ6LKdFXOvCqfgApApus7n66uqYxl31scUjpxwlZrgZBnf0yn35VzWgeZjK5uGQ13g==}
+    peerDependencies:
+      svelte: ^3.48.0 || ^4.0.0 || ^5.0.0-next.0
 
   svelte@5.2.7:
     resolution: {integrity: sha512-cEhPGuLHiH2+Z8B1FwQgiZJgA39uUmJR4516TKrM5zrp0/cuwJkfhUfcTxhAkznanAF5fXUKzvYR4o+Ksx3ZCQ==}
@@ -2817,6 +2839,11 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
+  runed@0.16.1(svelte@5.2.7):
+    dependencies:
+      esm-env: 1.1.4
+      svelte: 5.2.7
+
   sade@1.8.1:
     dependencies:
       mri: 1.2.0
@@ -2938,6 +2965,15 @@ snapshots:
   svelte-parse-markup@0.1.5(svelte@5.2.7):
     dependencies:
       svelte: 5.2.7
+
+  svelte-persisted-store@0.11.0(svelte@5.2.7):
+    dependencies:
+      svelte: 5.2.7
+
+  svelte-use-persist@0.7.0(svelte@5.2.7):
+    dependencies:
+      svelte: 5.2.7
+      svelte-persisted-store: 0.11.0(svelte@5.2.7)
 
   svelte@5.2.7:
     dependencies:

@@ -39,6 +39,8 @@
 		"@number-flow/svelte": "^0.2.1",
 		"@sveltejs/enhanced-img": "^0.3.9",
 		"clsx": "^2.1.1",
-		"lucide-svelte": "^0.453.0"
+		"lucide-svelte": "^0.453.0",
+		"runed": "^0.16.1",
+		"svelte-use-persist": "^0.7.0"
 	}
 }

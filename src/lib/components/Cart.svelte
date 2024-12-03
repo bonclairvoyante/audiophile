@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CartItem from './CartItem.svelte';
 	import { cartProducts } from '$lib/cart.svelte';
-
+	
 	import Link from './Link.svelte';
 
 	const cartTotal = $derived.by(() => {
@@ -11,6 +11,7 @@
 		}
 		return total;
 	});
+	
 </script>
 
 <section>
@@ -34,15 +35,18 @@
 		{/if}
 	</div>
 
-	<div class="divider"></div>
 	<div class="flex justify-between items-center p-2 font-bold">
-		<p>Total:</p>
-		<p>$ {cartTotal}</p>
+		{#if cartProducts.length > 0}
+			<p>Total:</p>
+			<p>$ {cartTotal}</p>
+		{/if}
 	</div>
 
-	<a href="/" class="text-center"
-		><button class="btn btn-block hover:bg-orange-bright bg-orange uppercase rounded-none"
-			>checkout</button
-		></a
-	>
+	{#if cartProducts.length > 0}
+		<a href="/" class="text-center"
+			><button class="btn btn-block hover:bg-orange-bright bg-orange uppercase rounded-none"
+				>checkout</button
+			></a
+		>
+	{/if}
 </section>

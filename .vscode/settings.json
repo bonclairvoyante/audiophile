@@ -1,4 +1,5 @@
 {
 	"workbench.editor.wrapTabs": true,
-	"workbench.editor.pinnedTabsOnSeparateRow": true
+	"workbench.editor.pinnedTabsOnSeparateRow": true,
+	"editor.fontFamily": "'Monaspace Neon', monospace"
 }
