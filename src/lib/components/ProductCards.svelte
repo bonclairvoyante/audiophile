@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="flex flex-col md:flex-row justify-center items-center md:gap-12 gap-24 md:mt-16 mb-12 xl:pt-20 mx-4"
+	class="flex flex-col md:flex-row justify-center items-center md:gap-12 gap-24 mt-20 md:mt-16 mb-12 xl:pt-20 mx-4"
 >
 	<div
 		class="flex flex-col justify-center items-center bg-white-grey rounded-md p-4 relative product-card-headphones"
