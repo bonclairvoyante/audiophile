@@ -4,7 +4,7 @@
 	let { children } = $props();
 	import '../app.css';
 	import Navbar from '$lib/components/Navbar.svelte';
-	import BottomAbout from '$lib/components/BottomAbout.svelte';
+
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
@@ -19,5 +19,5 @@
 <Navbar />
 
 {@render children()}
-<BottomAbout />
+
 <Footer />

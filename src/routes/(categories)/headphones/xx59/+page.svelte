@@ -20,7 +20,7 @@
 	let showCaret = $state(true);
 
 	const handleClick = function () {
-		goto('/headphones', { replaceState: true });
+		goto('/headphones');
 	};
 
 	function handleInput() {
@@ -113,7 +113,7 @@
 							name: xx59[0].name,
 							quantity: value,
 							price: xx59[0].price,
-							thumbmail: "/assets/cart/image-xx59-headphones.jpg"
+							thumbmail: '/assets/cart/image-xx59-headphones.jpg'
 						});
 					}}>Add to Cart</button
 				>

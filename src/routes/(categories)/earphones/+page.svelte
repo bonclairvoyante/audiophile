@@ -1,11 +1,13 @@
 <script lang="ts">
-	import { quadOut, quintIn, quintInOut} from 'svelte/easing';
-	import {fade, fly} from 'svelte/transition';
-
+	import { quadOut, quintIn, quintInOut } from 'svelte/easing';
+	import { fade, fly } from 'svelte/transition';
 </script>
+
 <main class="mx-[3rem] mt-8 md:mt-12">
 	<!-- YX1 Wireless earphones -->
-	<section in:fade={{ delay: 500, duration: 750,  easing: quintIn}} out:fade
+	<section
+		in:fade={{ delay: 500, duration: 750, easing: quintIn }}
+		out:fade
 		class="flex flex-col lg:flex-row gap-4 lg:gap-8 text-center lg:text-start pb-10 md:pb-14 lg:pb-20"
 	>
 		<enhanced:img
@@ -30,4 +32,5 @@
 			</div>
 		</div>
 	</section>
+	
 </main>

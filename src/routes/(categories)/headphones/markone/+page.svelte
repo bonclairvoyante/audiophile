@@ -20,7 +20,7 @@
 	let showCaret = $state(true);
 
 	const handleClick = () => {
-		goto('/headphones', { replaceState: true });
+		goto('/headphones');
 	};
 
 	function handleInput() {
@@ -157,7 +157,7 @@
 	</section>
 	<!-- Gallery -->
 	<section
-		class="flex flex-col gap-2 md:gap-[1rem] lg:gap-[1.4rem] md:flex-row pb-4 md:pb-8 lg:pb-12 items-center xl:gap-[2rem]"
+		class="flex flex-col gap-2 md:gap-[1rem] lg:gap-[1.4rem] md:flex-row pb-4 md:pb-8 lg:pb-12 justify-center items-center xl:gap-[2rem]"
 	>
 		<div class="flex flex-col gap-2 md:gap-[1.32rem] lg:gap-[1.6rem] xl:gap-[2rem]">
 			<enhanced:img

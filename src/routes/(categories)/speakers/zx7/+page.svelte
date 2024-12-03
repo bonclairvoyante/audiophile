@@ -20,7 +20,7 @@
 	let showCaret = $state(true);
 
 	const handleClick = function () {
-		goto('/speakers', { replaceState: true });
+		goto('/speakers');
 	};
 
 	function handleInput() {
