@@ -43,7 +43,7 @@
 	</div>
 
 	{#if cartProducts.length > 0}
-		<a href="/" class="text-center"
+		<a href="/checkout" class="text-center"
 			><button class="btn btn-block hover:bg-orange-bright bg-orange uppercase rounded-none"
 				>checkout</button
 			></a
