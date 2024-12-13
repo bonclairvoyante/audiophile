@@ -38,7 +38,7 @@
 		<div class="flex flex-col gap-4 lg:gap-7 self-center">
 			<h1 class="uppercase text-3xl lg:text-5xl font-bold">ZX7 Speaker</h1>
 			<p class="font-normal leading-relaxed text-sm md:text-lg">
-				tream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end
+				Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end
 				audiophile components that represents the top of the line powered speakers for home or
 				studio use.
 			</p>

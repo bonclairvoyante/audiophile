@@ -8,6 +8,6 @@
 
 <ProductCards />
 
-<div class="mx-4 md:mx-20 my-16">
+<div class="mx-4 md:mx-24 my-16">
 	<BottomAbout />
 </div>

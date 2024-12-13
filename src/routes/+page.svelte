@@ -13,6 +13,7 @@
 	<ProductCards />
 	
 	<!-- Product Preview Tiles -->
+	 <!-- ZX9 Speaker -->
 	<article
 		class="flex lg:flex-row flex-col bg-orange bg-spiral justify-center items-center rounded-xl text-balance mb-12"
 	>
@@ -26,9 +27,9 @@
 			<p class="text-balance text-white-grey font-thin">
 				Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound
 			</p>
-			<div class="block pb-4 pt-4">
+			<div class="pb-4 pt-4">
 				<a href="/speakers/zx9">
-					<button class=" text-white bg-charcoal hover:bg-zinc-700 px-4 py-3 text-sm mb-5">
+					<button class=" text-white bg-charcoal hover:bg-zinc-700 px-4 py-3 text-sm mb-5 shadow-sm">
 						SEE PRODUCT
 					</button>
 				</a>

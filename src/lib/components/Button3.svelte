@@ -1,7 +1,7 @@
 <script>
-	import { ChevronRight } from 'lucide-svelte';
+	import Chevronright from './Chevronright.svelte';
 </script>
 
 <button class=" text-charcoal hover:text-orange-bright px-4 py-3">
-	<div class="flex gap-2 items-center">SHOP<ChevronRight color="#FBAF85"/></div>
+	<div class="flex gap-2 items-center">SHOP<Chevronright color="#FBAF85" /></div>
 </button>
