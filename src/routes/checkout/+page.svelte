@@ -1,6 +1,8 @@
 <script>
 	import GoBack from '$lib/components/GoBack.svelte';
 	import { cartProducts } from '$lib/cart.svelte';
+	import { superForm } from 'sveltekit-superforms';
+	import SuperDebug from 'sveltekit-superforms';
 
 	const shipping = $state(50);
 	const summaryTotal = $derived.by(() => {
@@ -10,12 +12,17 @@
 		}
 		return total;
 	});
+
+	let { data } = $props();
+	const { form } = superForm(data.form);
 </script>
 
-<section class=" bg-white-grey">
+<SuperDebug data={$form} />
+
+<section class=" bg-white-grey pb-16">
 	<div class="pb-4 mx-4 md:mx-14">
 		<a href="/" class="p-2"><GoBack /></a>
-		<form class="bg-white rounded-md px-8 py-4">
+		<form class="bg-white rounded-md px-8 py-4" method="post" action="?/checkout">
 			<h1 class="uppercase text-2xl lg:text-3xl font-bold">Checkout</h1>
 			<h2 class="uppercase text-xs lg:text-3xl font-bold text-orange pt-2">Billing details</h2>
 
@@ -24,13 +31,22 @@
 					<div class="label">
 						<span class="label-text">Name</span>
 					</div>
-					<input type="text" name="name" class="input input-bordered w-full" />
+					<input
+						type="text"
+						name="name"
+						class="input input-bordered w-full"
+						bind:value={$form.name}
+					/>
 				</label>
 				<label for="email" class="form-control w-full">
 					<div class="label">
 						<span class="label-text">Email Address</span>
 					</div>
-					<input type="email" name="email" class="input input-bordered w-full" />
+					<input
+						type="email"
+						name="email"
+						class="input input-bordered w-full bind:value={$form.email}"
+					/>
 				</label>
 			</div>
 
@@ -38,7 +54,12 @@
 				<div class="label">
 					<span class="label-text">Phone Number</span>
 				</div>
-				<input type="tel" name="tel" class="input input-bordered w-full max-w-xs" />
+				<input
+					type="tel"
+					name="tel"
+					class="input input-bordered w-full max-w-xs"
+					bind:value={$form.tel}
+				/>
 			</label>
 
 			<h2 class="uppercase text-xs lg:text-3xl font-bold text-orange pt-6">Shipping Info</h2>
@@ -47,7 +68,12 @@
 				<div class="label">
 					<span class="label-text">Your Address</span>
 				</div>
-				<input type="address" name="address" class="input input-bordered w-full" />
+				<input
+					type="address"
+					name="address"
+					class="input input-bordered w-full"
+					bind:value={$form.address}
+				/>
 			</label>
 
 			<div class="flex flex-col md:flex-row gap-4">
@@ -55,14 +81,24 @@
 					<div class="label">
 						<span class="label-text">ZIP Code</span>
 					</div>
-					<input type="number" name="zip" class="input input-bordered w-full" />
+					<input
+						type="number"
+						name="zip"
+						class="input input-bordered w-full"
+						bind:value={$form.zip}
+					/>
 				</label>
 
 				<label for="city" class="form-control w-full">
 					<div class="label">
 						<span class="label-text">City</span>
 					</div>
-					<input type="string" name="city" class="input input-bordered w-full" />
+					<input
+						type="string"
+						name="city"
+						class="input input-bordered w-full"
+						bind:value={$form.city}
+					/>
 				</label>
 			</div>
 
@@ -74,6 +110,7 @@
 					type="string"
 					name="country"
 					class="input input-bordered w-full md:w-[18em] lg:w-[25.5em] xl:w-[39em]"
+					bind:value={$form.country}
 				/>
 			</label>
 
@@ -97,10 +134,10 @@
 		</form>
 	</div>
 
-	<div class="py-4 mx-4 md:mx-14 bg-white rounded-md px-4 md:px-8">
+	<div class="py-4 mx-4 md:mx-14 bg-white rounded-md px-4 md:px-8 pb-12">
 		<h2 class="uppercase text-xl lg:text-2xl font-bold py-4">Summary</h2>
 
-		<div class="flex justify-between items-center">
+		<div class="flex justify-between items-center pb-5">
 			<img
 				src="https://via.placeholder.com/50"
 				alt="Product"
@@ -114,5 +151,28 @@
 				<p class="text-zinc-400 font-semibold">x1</p>
 			</div>
 		</div>
+
+		{#each cartProducts as cartProduct}
+			<div class="flex justify-between items-center pb-5">
+				<img src={cartProduct.thumbmail} alt="Product" class="size-12 object-cover rounded mr-4" />
+				<div>
+					<p class="font-medium">{cartProduct.short}</p>
+					<p class="text-sm font-semibold text-zinc-400">
+						{cartProduct.price * cartProduct.quantity}
+					</p>
+				</div>
+				<div>
+					<p class="text-zinc-400 font-semibold">x{cartProduct.quantity}</p>
+				</div>
+			</div>
+		{/each}
+
+		<a href="/">
+			<button
+				class="bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase w-full rounded tracking-small"
+			>
+				continue & pay
+			</button></a
+		>
 	</div>
 </section>

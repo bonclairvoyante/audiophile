@@ -112,7 +112,7 @@
 					onclick={() => {
 						cartProducts.push({
 							id: crypto.randomUUID(),
-							name: zx7[0].name,
+							short: zx7[0].short,
 							quantity: value,
 							price: zx7[0].price,
 							thumbmail: '/assets/cart/image-zx7-speaker.jpg'
