@@ -17,7 +17,7 @@
 	const { form } = superForm(data.form);
 </script>
 
-<SuperDebug data={$form} />
+<!-- <SuperDebug data={$form} /> -->
 
 <section class=" bg-white-grey pb-16">
 	<div class="pb-4 mx-4 md:mx-14">
