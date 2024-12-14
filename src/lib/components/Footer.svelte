@@ -23,12 +23,26 @@
 		class="mt-12 flex flex-col md:flex-row gap-x-4 gap-y-6 justify-center items-center md:justify-between px-18 md:px-24"
 	>
 		<p class="text-zinc-400 tracking-smaller font-thin font text-xs">
-			Copyright 2021. All Rights Reserved
+			Copyright 2024. All Rights Reserved
 		</p>
 		<div class="flex gap-6">
 			<Facebook color="#FAFAFA" />
 			<Twitter color="#FAFAFA" />
 			<Instagram color="#FAFAFA" />
 		</div>
+	</div>
+	<div class="flex flex-col justify-center items-center gap-2 pt-12 text-sm ">
+		<p class="text-zinc-500">
+			Built by <a
+				href="https://github.com/bonclairvoyante"
+				class="text-orange hover:text-orange-bright">Barry Sande</a
+			>
+		</p>
+		<p class="text-zinc-500">
+			Using designs from <a
+				href="https://www.frontendmentor.io/"
+				class="text-orange hover:text-orange-bright">Frontend Mentor</a
+			>
+		</p>
 	</div>
 </footer>

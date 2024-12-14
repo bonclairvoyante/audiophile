@@ -5,8 +5,12 @@
 	import SuperDebug from 'sveltekit-superforms';
 	import { CheckoutSchema } from '$lib/schema/Checkoutschema.js';
 	import { valibotClient } from 'sveltekit-superforms/adapters';
+	import Modal from './Modal.svelte';
+	import BadgeCheck from './BadgeCheck.svelte';
 
-	const shipping = $state(50);
+	let { data } = $props();
+	let showModal = $state(false);
+	let shipping = $state(50);
 	const summaryTotal = $derived.by(() => {
 		let total = 0;
 		for (const product of cartProducts) {
@@ -14,11 +18,13 @@
 		}
 		return total;
 	});
+	const vat = $derived(Math.trunc(summaryTotal * 0.2));
+	const grandTotal = $derived(shipping + summaryTotal + vat);
 
-	let { data } = $props();
 	const { form, enhance, errors, message, capture, restore } = superForm(data.form, {
 		validators: valibotClient(CheckoutSchema)
 	});
+
 	export const snapshot = { capture, restore };
 </script>
 
@@ -29,7 +35,7 @@
 		<a href="/" class="p-2"><GoBack /></a>
 		<form class="bg-white rounded-md px-8 py-4" method="post" action="?/checkout" use:enhance>
 			<h1 class="uppercase text-2xl lg:text-3xl font-bold">Checkout</h1>
-			<h2 class="uppercase text-xs lg:text-3xl font-bold text-orange pt-2">Billing details</h2>
+			<h2 class="uppercase text-xs font-bold text-orange pt-2">Billing details</h2>
 
 			<div class="flex flex-col md:flex-row gap-4">
 				<label for="name" class="form-control w-full">
@@ -77,7 +83,7 @@
 				{/if}
 			</label>
 
-			<h2 class="uppercase text-xs lg:text-3xl font-bold text-orange pt-6">Shipping Info</h2>
+			<h2 class="uppercase text-xs font-bold text-orange pt-6">Shipping Info</h2>
 
 			<label for="address" class="form-control w-full">
 				<div class="label">
@@ -139,7 +145,7 @@
 				{#if $errors.country}<span class="invalid">{$errors.country}</span>{/if}
 			</label>
 
-			<!-- <h2 class="uppercase text-xs lg:text-3xl font-bold text-orange">Payment Details</h2>
+			<!-- <h2 class="uppercase text-xs  font-bold text-orange">Payment Details</h2>
 
 			<label for="country" class="form-control w-full max-w-xs">
 				<div class="label">
@@ -176,19 +182,74 @@
 				</div>
 			</div>
 		{/each}
+		<div class="container flex flex-col gap-3">
+			<div class="total flex justify-between items-center">
+				<p class="uppercase text-zinc-400 font-medium">Total</p>
+				<p class="font-semibold">$ {summaryTotal}</p>
+			</div>
+			<div class="total flex justify-between items-center">
+				<p class="uppercase text-zinc-400 font-medium">Shipping</p>
+				<p class="font-semibold">$ {shipping}</p>
+			</div>
+			<div class="total flex justify-between items-center">
+				<p class="uppercase text-zinc-400 font-medium">vat (included)</p>
+				<p class="font-semibold">$ {vat}</p>
+			</div>
+			<div class="divider"></div>
+			<div class="total flex justify-between items-center pb-5">
+				<p class="uppercase text-zinc-400 font-medium">grand total</p>
+				<p class="font-semibold text-orange">$ {grandTotal}</p>
+			</div>
+		</div>
 
-		<a href="/">
-			<button
-				class="bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase w-full rounded tracking-small"
-			>
-				continue & pay
-			</button></a
+		<button
+			class="bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase w-full rounded tracking-small" type="submit"
+			onclick={() => (showModal = true)}
 		>
+			continue & pay
+		</button>
+
+		<Modal bind:showModal>
+			{#snippet header()}
+				<BadgeCheck />
+				<h1 class="uppercase font-semibold text-2xl pt-2">
+					Thank you <br />
+					For your order
+				</h1>
+				<p class="text-zinc-400 pt-2 pb-3">You will receive an email confirmation <br />shortly.</p>
+			{/snippet}
+
+			<div class="pb-4">
+				{#if cartProducts.length > 0}
+					<div class="flex justify-between items-center bg-white-grey rounded-md p-4">
+						<img
+							src={cartProducts[0].thumbmail}
+							alt="first product thumbnail"
+							class="size-12 object-cover rounded"
+						/>
+						<div class="">
+							<p>{cartProducts[0].short}</p>
+							<p class="text-zinc-400 font-semibold">$ {cartProducts[0].price}</p>
+						</div>
+						<p class="text-zinc-400 font-semibold">x{cartProducts[0].quantity}</p>
+					</div>
+					<div class="divider"></div>
+					{#if cartProducts.length >= 2}
+						<p class="text-zinc-400 text-center pb-4">and {cartProducts.length - 1} other items(s)</p>
+					{/if}
+				{/if}
+				<div class="bg-black rounded-md flex flex-col gap-3 p-3">
+					<h2 class="text-zinc-400 uppercase text-xs font-medium">Grand total</h2>
+					<p class="text-white text-sm font-semibold">$ {grandTotal}</p>
+
+				</div>
+			</div>
+		</Modal>
 	</div>
 </section>
 
 <style>
 	.invalid {
-		color: red;
+		color: #d87d4a;
 	}
 </style>
