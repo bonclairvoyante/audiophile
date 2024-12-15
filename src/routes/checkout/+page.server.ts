@@ -1,10 +1,12 @@
 import { valibot } from 'sveltekit-superforms/adapters';
 import { CheckoutSchema } from '$lib/schema/Checkoutschema';
 import type { Actions } from './$types';
-import { message, fail, superValidate } from 'sveltekit-superforms';
+import { message, fail, superValidate, type Infer } from 'sveltekit-superforms';
 
+
+type Message = { status: 'error' | 'success' | 'warning'; text: string };
 export const load = async () => {
-	const form = await superValidate(valibot(CheckoutSchema));
+	const form = await superValidate<Infer<typeof CheckoutSchema>, Message> (valibot(CheckoutSchema));
 
 	// Always return { form } in load functions
 	return { form };
@@ -17,6 +19,6 @@ export const actions: Actions = {
 			return fail(400, { form });
 		}
 
-		return message(form, 'You have successfully placed your order, thank you!');
+		return message(form, {text:'You have successfully submitted your details, thank you!'});
 	}
 };

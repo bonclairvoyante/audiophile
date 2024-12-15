@@ -62,6 +62,7 @@
 						aria-invalid={$errors.email ? 'true' : undefined}
 						class="input input-bordered w-full"
 						bind:value={$form.email}
+						placeholder="brucewayne@example.com"
 					/>
 					{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
 				</label>
@@ -77,7 +78,7 @@
 					aria-invalid={$errors.tel ? 'true' : undefined}
 					class="input input-bordered w-full max-w-xs"
 					bind:value={$form.tel}
-					placeholder="+1 123 456789"
+					placeholder="+254 123 456789"
 				/>
 				{#if $errors.tel}<span class="invalid">{$errors.tel}</span>
 				{/if}
@@ -95,6 +96,7 @@
 					aria-invalid={$errors.address ? 'true' : undefined}
 					class="input input-bordered w-full"
 					bind:value={$form.address}
+					placeholder="Comfort Heights, Nairobi"
 				/>
 				{#if $errors.address}
 					<span class="invalid">{$errors.address}</span>
@@ -104,7 +106,7 @@
 			<div class="flex flex-col md:flex-row gap-4">
 				<label for="road" class="form-control w-full">
 					<div class="label">
-						<span class="label-text">Name of Street or Road</span>
+						<span class="label-text">Name of Road</span>
 					</div>
 					<input
 						type="street"
@@ -112,6 +114,7 @@
 						aria-invalid={$errors.street ? 'true' : undefined}
 						class="input input-bordered w-full"
 						bind:value={$form.street}
+						placeholder="K Road"
 					/>
 					{#if $errors.street}<span class="invalid">{$errors.street}</span>{/if}
 				</label>
@@ -126,6 +129,7 @@
 						aria-invalid={$errors.city ? 'true' : undefined}
 						class="input input-bordered w-full"
 						bind:value={$form.city}
+						placeholder="Nairobi"
 					/>
 					{#if $errors.city}<span class="invalid">{$errors.city}</span>{/if}
 				</label>
@@ -141,6 +145,7 @@
 					aria-invalid={$errors.country ? 'true' : undefined}
 					class="input input-bordered w-full md:w-[18em] lg:w-[25.5em] xl:w-[39em]"
 					bind:value={$form.country}
+					placeholder="Kenya"
 				/>
 				{#if $errors.country}<span class="invalid">{$errors.country}</span>{/if}
 			</label>
