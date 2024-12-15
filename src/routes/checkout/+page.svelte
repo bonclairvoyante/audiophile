@@ -171,7 +171,7 @@
 		{#each cartProducts as cartProduct}
 			<div class="flex justify-between items-center pb-5">
 				<img src={cartProduct.thumbmail} alt="Product" class="size-12 object-cover rounded mr-4" />
-				<div>
+				<div class="text-center">
 					<p class="font-medium">{cartProduct.short}</p>
 					<p class="text-sm font-semibold text-zinc-400">
 						$ {cartProduct.price * cartProduct.quantity}
@@ -203,7 +203,8 @@
 		</div>
 
 		<button
-			class="bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase w-full rounded tracking-small" type="submit"
+			class="bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase w-full rounded tracking-small"
+			type="submit"
 			onclick={() => (showModal = true)}
 		>
 			continue & pay
@@ -227,7 +228,7 @@
 							alt="first product thumbnail"
 							class="size-12 object-cover rounded"
 						/>
-						<div class="">
+						<div>
 							<p>{cartProducts[0].short}</p>
 							<p class="text-zinc-400 font-semibold">$ {cartProducts[0].price}</p>
 						</div>
@@ -235,13 +236,14 @@
 					</div>
 					<div class="divider"></div>
 					{#if cartProducts.length >= 2}
-						<p class="text-zinc-400 text-center pb-4">and {cartProducts.length - 1} other items(s)</p>
+						<p class="text-zinc-400 text-center pb-4">
+							and {cartProducts.length - 1} other items(s)
+						</p>
 					{/if}
 				{/if}
 				<div class="bg-black rounded-md flex flex-col gap-3 p-3">
 					<h2 class="text-zinc-400 uppercase text-xs font-medium">Grand total</h2>
 					<p class="text-white text-sm font-semibold">$ {grandTotal}</p>
-
 				</div>
 			</div>
 		</Modal>
