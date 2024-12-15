@@ -145,6 +145,15 @@
 				{#if $errors.country}<span class="invalid">{$errors.country}</span>{/if}
 			</label>
 
+			<div class="pt-4 pb-4 text-center">
+				<button
+				class="btn bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase rounded tracking-small"
+				type="submit"
+			>
+				submit your details
+			</button>
+			</div>
+
 			<!-- <h2 class="uppercase text-xs  font-bold text-orange">Payment Details</h2>
 
 			<label for="country" class="form-control w-full max-w-xs">
@@ -204,7 +213,6 @@
 
 		<button
 			class="bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase w-full rounded tracking-small"
-			type="submit"
 			onclick={() => (showModal = true)}
 		>
 			continue & pay
