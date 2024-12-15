@@ -31,17 +31,17 @@
 			<Instagram color="#FAFAFA" />
 		</div>
 	</div>
-	<div class="flex flex-col justify-center items-center gap-2 pt-12 text-sm ">
+	<div class="flex flex-col justify-center items-center gap-4 pt-12 text-base ">
 		<p class="text-zinc-500">
 			Built by <a
 				href="https://github.com/bonclairvoyante"
-				class="text-orange hover:text-orange-bright">Barry Sande</a
+				class="text-orange hover:text-orange-bright underline underline-offset-4 ">Barry Sande</a
 			>
 		</p>
 		<p class="text-zinc-500">
 			Using designs from <a
 				href="https://www.frontendmentor.io/"
-				class="text-orange hover:text-orange-bright">Frontend Mentor</a
+				class="text-orange hover:text-orange-bright underline underline-offset-4">Frontend Mentor</a
 			>
 		</p>
 	</div>
