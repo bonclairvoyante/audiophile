@@ -29,6 +29,17 @@
 </script>
 
 <!-- <SuperDebug data={$form} /> -->
+{#if $message}
+	<div class="toast toast-top toast-end">
+		<div
+			class="alert alert-info"
+			class:success={$message.status == 'success'}
+			class:error={$message.status == 'error'}
+		>
+			<span>{$message.text}</span>
+		</div>
+	</div>
+{/if}
 
 <section class=" bg-white-grey pb-16">
 	<div class="pb-4 mx-4 md:mx-14">
@@ -152,11 +163,11 @@
 
 			<div class="pt-4 pb-4 text-center">
 				<button
-				class="btn bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase rounded tracking-small"
-				type="submit"
-			>
-				submit your details
-			</button>
+					class="btn bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase rounded tracking-small"
+					type="submit"
+				>
+					submit your details
+				</button>
 			</div>
 
 			<!-- <h2 class="uppercase text-xs  font-bold text-orange">Payment Details</h2>
