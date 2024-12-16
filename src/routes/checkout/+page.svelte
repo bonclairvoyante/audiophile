@@ -32,7 +32,7 @@
 {#if $message}
 	<div class="toast toast-top toast-end">
 		<div
-			class="alert alert-info"
+			class="alert alert-success"
 			class:success={$message.status == 'success'}
 			class:error={$message.status == 'error'}
 		>
