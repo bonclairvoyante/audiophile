@@ -21,7 +21,7 @@
 	const vat = $derived(Math.trunc(summaryTotal * 0.2));
 	const grandTotal = $derived(shipping + summaryTotal + vat);
 
-	const { form, enhance, errors, message, capture, restore } = superForm(data.form, {
+	const { form, enhance, errors, message, capture, restore, delayed } = superForm(data.form, {
 		validators: valibotClient(CheckoutSchema)
 	});
 
@@ -168,6 +168,9 @@
 				>
 					submit your details
 				</button>
+				{#if $delayed}
+					<span class="loading loading-dots loading-md text-orange"></span>
+				{/if}
 			</div>
 
 			<!-- <h2 class="uppercase text-xs  font-bold text-orange">Payment Details</h2>
