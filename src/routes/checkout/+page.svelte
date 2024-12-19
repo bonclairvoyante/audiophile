@@ -26,10 +26,11 @@
 	});
 
 	export const snapshot = { capture, restore };
+	let visible = $state(true);
 </script>
 
 <!-- <SuperDebug data={$form} /> -->
-{#if $message}
+<!-- {#if $message}
 	<div class="toast toast-top toast-end">
 		<div
 			class="alert alert-success"
@@ -37,9 +38,10 @@
 			class:error={$message.status == 'error'}
 		>
 			<span>{$message.text}</span>
+			
 		</div>
 	</div>
-{/if}
+{/if} -->
 
 <section class=" bg-white-grey pb-16">
 	<div class="pb-4 mx-4 md:mx-14">
@@ -170,6 +172,9 @@
 				</button>
 				{#if $delayed}
 					<span class="loading loading-dots loading-md text-orange"></span>
+				{/if}
+				{#if $message}
+					<p class="text-orange">{$message.text}</p>
 				{/if}
 			</div>
 

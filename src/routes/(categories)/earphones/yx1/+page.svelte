@@ -48,8 +48,8 @@
 
 <main class="mx-[1.51em] md:mx-[1em] mb-24">
 	<!-- Card section -->
-	<button onclick={handleClick} class="p-4">
-		<GoBack />
+	<button onclick={handleClick} class="p-4 flex items-center gap-3">
+		<GoBack /> <p class="text-zinc-400">Go Back</p>
 	</button>
 	<section class="p-3 md:p-4 lg:p-5 flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-10 text-start">
 		<enhanced:img

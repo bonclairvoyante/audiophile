@@ -19,6 +19,6 @@ export const actions: Actions = {
 			return fail(400, { form });
 		}
 
-		return message(form, {text:'You have successfully submitted your details, thank you!'});
+		return message(form, {text:'Details successfully submitted, please confirm your order below'});
 	}
 };

@@ -68,12 +68,16 @@
 				<!-- Page content here -->
 				<label for="my-drawer-4" class="drawer-button">
 					<div
-						class="bg-orange hover:bg-orange-bright rounded-xl px-4 py-1 flex justify-between items-center gap-x-2"
+						class="flex gap-2 items-center"
 					>
 						<CartIcon />
-						<div class="badge badge-xs {cartQuantity > 0 ? 'badge-primary' : 'badge-secondary'}">
-							{cartQuantity}
-						</div>
+						<p class="badge badge-xs absolute bottom-5 right-9 {cartQuantity > 0 ? 'badge-secondary' : 'hidden'}">
+							{#if cartQuantity > 0}
+								{cartQuantity}
+								
+							{/if}
+						</p>
+						<p class="font-semibold tracking-smaller">Cart</p>
 					</div>
 				</label>
 			</div>

@@ -47,8 +47,9 @@
 
 <main class="mx-[1.51rem] md:mx-[1em] mb-24">
 	<!-- Card section -->
-	<button onclick={handleClick} class="p-4">
+	<button onclick={handleClick} class="p-4 flex items-center gap-3">
 		<GoBack />
+		<p class="text-zinc-400">Go Back</p>
 	</button>
 	<section class="p-3 md:p-4 lg:p-5 flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-10 text-start">
 		<enhanced:img
@@ -113,7 +114,7 @@
 							short: markone[0].short,
 							quantity: value,
 							price: markone[0].price,
-							thumbmail: "/assets/cart/image-xx99-mark-one-headphones.jpg"
+							thumbmail: '/assets/cart/image-xx99-mark-one-headphones.jpg'
 						});
 					}}>Add to Cart</button
 				>
