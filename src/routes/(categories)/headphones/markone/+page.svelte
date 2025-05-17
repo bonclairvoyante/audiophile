@@ -5,7 +5,8 @@
 	import clsx from 'clsx';
 	import { goto } from '$app/navigation';
 	import SeeButton from '$lib/components/SeeButton.svelte';
-	import { cartProducts } from '$lib/cart.svelte';
+	import { cart } from '$lib/cart.svelte';
+	import toast from 'svelte-french-toast';
 
 	let {
 		min = 0,
@@ -109,13 +110,17 @@
 				<button
 					class="bg-orange hover:bg-orange-bright w-40 lg:w-48 py-3 text-white text-nowrap"
 					onclick={() => {
-						cartProducts.push({
+						cart.cartProducts.current.push({
 							id: crypto.randomUUID(),
 							short: markone[0].short,
 							quantity: value,
 							price: markone[0].price,
 							thumbmail: '/assets/cart/image-xx99-mark-one-headphones.jpg'
 						});
+						toast.success(`${markone[0].name} added to cart!`, {
+								style: 'background: #dcfce7; color: #016630',
+								duration: 1500
+							});
 					}}>Add to Cart</button
 				>
 			</div>

@@ -4,6 +4,7 @@
 	let { children } = $props();
 	import '../app.css';
 	import Navbar from '$lib/components/Navbar.svelte';
+	import { Toaster } from "svelte-french-toast";
 
 	import Footer from '$lib/components/Footer.svelte';
 </script>
@@ -15,6 +16,8 @@
 		content="Audiophile is a one-stop place to get the best of headphones, earphones, and speakers for audiophile"
 	/>
 </svelte:head>
+
+<Toaster />
 
 <Navbar />
 

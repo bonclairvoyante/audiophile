@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { removeFromCart } from '$lib/cart.svelte';
+	import { cart } from '$lib/cart.svelte';
 	import type { CartProduct } from '$lib/types';
 	import { Plus, Minus, Trash } from 'lucide-svelte';
 
@@ -22,7 +22,7 @@
 		<button
 			onclick={() => {
 				if (cartProduct.quantity === 1) {
-					removeFromCart(cartProduct.id);
+					cart.removeFromCart(cartProduct.id);
 				} else {
 					cartProduct.quantity--;
 				}
@@ -44,7 +44,7 @@
 		</button>
 		<button
 			onclick={() => {
-				removeFromCart(cartProduct.id);
+				cart.removeFromCart(cartProduct.id);
 			}}
 			class="ml-4 p-1 text-orange hover:bg-orange-bright rounded"
 		>

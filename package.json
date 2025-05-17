@@ -43,6 +43,7 @@
 		"clsx": "^2.1.1",
 		"lucide-svelte": "^0.453.0",
 		"runed": "^0.16.1",
+		"svelte-french-toast": "^1.2.0",
 		"svelte-use-persist": "^0.7.0"
 	}
 }

@@ -1,11 +1,15 @@
+import { LocalStorage } from './storage.svelte';
 import type { CartProduct } from './types';
 
-export const cartProducts = $state<CartProduct[]>([]);
+class Cart {
+	cartProducts = new LocalStorage('cartProducts', []);
 
-export function removeFromCart(id: string) {
-	const index = cartProducts.findIndex((product) => product.id === id);
-	if (index > -1) {
-		cartProducts.splice(index, 1);
+	removeFromCart(id: string) {
+		const index = this.cartProducts.current.findIndex((product: CartProduct) => product.id === id);
+		if (index > -1) {
+			this.cartProducts.current.splice(index, 1);
+		}
 	}
 }
 
+export const cart = new Cart();

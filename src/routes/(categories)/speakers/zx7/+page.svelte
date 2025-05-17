@@ -5,7 +5,8 @@
 	import { goto, replaceState } from '$app/navigation';
 	import clsx from 'clsx';
 	import SeeButton from '$lib/components/SeeButton.svelte';
-	import { cartProducts } from '$lib/cart.svelte';
+	import { cart } from '$lib/cart.svelte';
+	import toast from 'svelte-french-toast';
 
 	let {
 		min = 0,
@@ -111,13 +112,17 @@
 				<button
 					class="bg-orange hover:bg-orange-bright w-40 lg:w-48 py-3 text-white text-nowrap"
 					onclick={() => {
-						cartProducts.push({
+						cart.cartProducts.current.push({
 							id: crypto.randomUUID(),
 							short: zx7[0].short,
 							quantity: value,
 							price: zx7[0].price,
 							thumbmail: '/assets/cart/image-zx7-speaker.jpg'
 						});
+						toast.success(`${zx7[0].name} added to cart!`, {
+								style: 'background: #dcfce7; color: #016630',
+								duration: 1500
+							});
 					}}>Add to Cart</button
 				>
 			</div>

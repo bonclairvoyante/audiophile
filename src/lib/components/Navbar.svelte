@@ -2,11 +2,11 @@
 	import CartIcon from './CartIcon.svelte';
 	import Cart from './Cart.svelte';
 	import { Menu, X } from 'lucide-svelte';
-	import { cartProducts } from '$lib/cart.svelte';
+	import { cart } from '$lib/cart.svelte';
 
 	const cartQuantity = $derived.by(() => {
 		let total = 0;
-		for (const product of cartProducts) {
+		for (const product of cart.cartProducts.current) {
 			total += product.quantity;
 		}
 		return total;

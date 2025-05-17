@@ -6,7 +6,8 @@
 	import clsx from 'clsx';
 	import { goto } from '$app/navigation';
 	import SeeButton from '$lib/components/SeeButton.svelte';
-	import { cartProducts } from '$lib/cart.svelte';
+	import { cart } from '$lib/cart.svelte';
+	import toast from 'svelte-french-toast';
 
 	let {
 		min = 0,
@@ -49,7 +50,8 @@
 <main class="mx-[1.51em] md:mx-[1em] mb-24">
 	<!-- Card section -->
 	<button onclick={handleClick} class="p-4 flex items-center gap-3">
-		<GoBack /> <p class="text-zinc-400">Go Back</p>
+		<GoBack />
+		<p class="text-zinc-400">Go Back</p>
 	</button>
 	<section class="p-3 md:p-4 lg:p-5 flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-10 text-start">
 		<enhanced:img
@@ -110,12 +112,16 @@
 				<button
 					class="bg-orange hover:bg-orange-bright w-40 lg:w-48 py-3 text-white text-nowrap"
 					onclick={() => {
-						cartProducts.push({
+						cart.cartProducts.current.push({
 							id: crypto.randomUUID(),
 							short: yx1[0].short,
 							quantity: value,
 							price: yx1[0].price,
-							thumbmail: "/assets/cart/image-yx1-earphones.jpg"
+							thumbmail: '/assets/cart/image-yx1-earphones.jpg'
+						});
+						toast.success(`${yx1[0].name} added to cart.`, {
+							style: 'background: #dcfce7; color: #016630',
+							duration: 1500
 						});
 					}}>Add to Cart</button
 				>

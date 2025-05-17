@@ -1,19 +1,19 @@
 <script lang="ts">
 	import GoBack from '$lib/components/GoBack.svelte';
-	import { cartProducts } from '$lib/cart.svelte';
+	import { cart } from '$lib/cart.svelte';
 	import { superForm } from 'sveltekit-superforms';
-	import SuperDebug from 'sveltekit-superforms';
 	import { CheckoutSchema } from '$lib/schema/Checkoutschema.js';
 	import { valibotClient } from 'sveltekit-superforms/adapters';
 	import Modal from './Modal.svelte';
 	import BadgeCheck from './BadgeCheck.svelte';
+	import toast from 'svelte-french-toast';
 
 	let { data } = $props();
 	let showModal = $state(false);
 	let shipping = $state(50);
 	const summaryTotal = $derived.by(() => {
 		let total = 0;
-		for (const product of cartProducts) {
+		for (const product of cart.cartProducts.current) {
 			total += product.price * product.quantity;
 		}
 		return total;
@@ -22,26 +22,31 @@
 	const grandTotal = $derived(shipping + summaryTotal + vat);
 
 	const { form, enhance, errors, message, capture, restore, delayed } = superForm(data.form, {
-		validators: valibotClient(CheckoutSchema)
+		validators: valibotClient(CheckoutSchema),
+		onResult: ({ result }) => {
+			switch (result.type) {
+				case 'success':
+					toast.success('Successfully submitted delivery details.', {
+						style: 'background: #dcfce7; color: #016630;',
+						duration: 2000
+					});
+					break;
+				case 'error':
+					toast.error('Error submitting delivery details!', {
+						style: 'background: #ffe2e2; color: #9f0712;',
+						duration: 2000
+					});
+					break;
+				default:
+					return;
+			}
+			return;
+		}
 	});
 
 	export const snapshot = { capture, restore };
 	let visible = $state(true);
 </script>
-
-<!-- <SuperDebug data={$form} /> -->
-<!-- {#if $message}
-	<div class="toast toast-top toast-end">
-		<div
-			class="alert alert-success"
-			class:success={$message.status == 'success'}
-			class:error={$message.status == 'error'}
-		>
-			<span>{$message.text}</span>
-			
-		</div>
-	</div>
-{/if} -->
 
 <section class=" bg-white-grey pb-16">
 	<div class="pb-4 mx-4 md:mx-14">
@@ -163,19 +168,14 @@
 				{#if $errors.country}<span class="invalid">{$errors.country}</span>{/if}
 			</label>
 
-			<div class="pt-4 pb-4 text-center">
+			<div class="pt-12 pb-8 text-center">
 				<button
 					class="btn bg-orange hover:bg-orange-bright px-4 py-3 text-white text-nowrap uppercase rounded tracking-small"
 					type="submit"
 				>
 					submit your details
 				</button>
-				{#if $delayed}
-					<span class="loading loading-dots loading-md text-orange"></span>
-				{/if}
-				{#if $message}
-					<p class="text-orange">{$message.text}</p>
-				{/if}
+				
 			</div>
 
 			<!-- <h2 class="uppercase text-xs  font-bold text-orange">Payment Details</h2>
@@ -201,7 +201,7 @@
 	<div class="py-4 mx-4 md:mx-14 bg-white rounded-md px-4 md:px-8 pb-12">
 		<h2 class="uppercase text-xl lg:text-2xl font-bold py-4">Summary</h2>
 
-		{#each cartProducts as cartProduct}
+		{#each cart.cartProducts.current as cartProduct}
 			<div class="flex justify-between items-center pb-5">
 				<img src={cartProduct.thumbmail} alt="Product" class="size-12 object-cover rounded mr-4" />
 				<div class="text-center">
@@ -253,23 +253,23 @@
 			{/snippet}
 
 			<div class="pb-4">
-				{#if cartProducts.length > 0}
+				{#if cart.cartProducts.current.length > 0}
 					<div class="flex justify-between items-center bg-white-grey rounded-md p-4">
 						<img
-							src={cartProducts[0].thumbmail}
+							src={cart.cartProducts.current[0].thumbmail}
 							alt="first product thumbnail"
 							class="size-12 object-cover rounded"
 						/>
 						<div>
-							<p>{cartProducts[0].short}</p>
-							<p class="text-zinc-400 font-semibold">$ {cartProducts[0].price}</p>
+							<p>{cart.cartProducts.current[0].short}</p>
+							<p class="text-zinc-400 font-semibold">$ {cart.cartProducts.current[0].price}</p>
 						</div>
-						<p class="text-zinc-400 font-semibold">x{cartProducts[0].quantity}</p>
+						<p class="text-zinc-400 font-semibold">x{cart.cartProducts.current[0].quantity}</p>
 					</div>
 					<div class="divider"></div>
-					{#if cartProducts.length >= 2}
+					{#if cart.cartProducts.current.length >= 2}
 						<p class="text-zinc-400 text-center pb-4">
-							and {cartProducts.length - 1} other items(s)
+							and {cart.cartProducts.current.length - 1} other items(s)
 						</p>
 					{/if}
 				{/if}

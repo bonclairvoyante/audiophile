@@ -26,6 +26,9 @@ importers:
       runed:
         specifier: ^0.16.1
         version: 0.16.1(svelte@5.2.7)
+      svelte-french-toast:
+        specifier: ^1.2.0
+        version: 1.2.0(svelte@5.2.7)
       svelte-use-persist:
         specifier: ^0.7.0
         version: 0.7.0(svelte@5.2.7)
@@ -119,6 +122,7 @@ packages:
 
   '@effect/schema@0.75.5':
     resolution: {integrity: sha512-TQInulTVCuF+9EIbJpyLP6dvxbQJMphrnRqgexm/Ze39rSjfhJuufF7XvU3SxTgg3HnL7B/kpORTJbHhlE6thw==}
+    deprecated: this package has been merged into the main effect package
     peerDependencies:
       effect: ^3.9.2
 
@@ -1639,6 +1643,11 @@ packages:
       svelte:
         optional: true
 
+  svelte-french-toast@1.2.0:
+    resolution: {integrity: sha512-5PW+6RFX3xQPbR44CngYAP1Sd9oCq9P2FOox4FZffzJuZI2mHOB7q5gJBVnOiLF5y3moVGZ7u2bYt7+yPAgcEQ==}
+    peerDependencies:
+      svelte: ^3.57.0 || ^4.0.0
+
   svelte-hamburgers@5.0.0:
     resolution: {integrity: sha512-MMb47VCozKDgn/jtmeqw+CbI3cZmkDXd/FG3VCkReMdw2YCSOaWYLsqsXiWTWoQE/oSmw1vH/Tm5mChqlsldHQ==}
     peerDependencies:
@@ -1659,6 +1668,11 @@ packages:
     resolution: {integrity: sha512-+cx/nAvnjuTjewHD9oNgMQ6LKdFXOvCqfgApApus7n66uqYxl31scUjpxwlZrgZBnf0yn35VzWgeZjK5uGQ13g==}
     peerDependencies:
       svelte: ^3.48.0 || ^4.0.0 || ^5.0.0-next.0
+
+  svelte-writable-derived@3.1.1:
+    resolution: {integrity: sha512-w4LR6/bYZEuCs7SGr+M54oipk/UQKtiMadyOhW0PTwAtJ/Ai12QS77sLngEcfBx2q4H8ZBQucc9ktSA5sUGZWw==}
+    peerDependencies:
+      svelte: ^3.2.1 || ^4.0.0-next.1 || ^5.0.0-next.94
 
   svelte@5.2.7:
     resolution: {integrity: sha512-cEhPGuLHiH2+Z8B1FwQgiZJgA39uUmJR4516TKrM5zrp0/cuwJkfhUfcTxhAkznanAF5fXUKzvYR4o+Ksx3ZCQ==}
@@ -3329,6 +3343,11 @@ snapshots:
     optionalDependencies:
       svelte: 5.2.7
 
+  svelte-french-toast@1.2.0(svelte@5.2.7):
+    dependencies:
+      svelte: 5.2.7
+      svelte-writable-derived: 3.1.1(svelte@5.2.7)
+
   svelte-hamburgers@5.0.0(svelte@5.2.7):
     dependencies:
       svelte: 5.2.7
@@ -3345,6 +3364,10 @@ snapshots:
     dependencies:
       svelte: 5.2.7
       svelte-persisted-store: 0.11.0(svelte@5.2.7)
+
+  svelte-writable-derived@3.1.1(svelte@5.2.7):
+    dependencies:
+      svelte: 5.2.7
 
   svelte@5.2.7:
     dependencies:

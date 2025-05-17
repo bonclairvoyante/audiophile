@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { quadOut, quintIn, quintInOut } from 'svelte/easing';
-	import { fade, fly } from 'svelte/transition';
+	import { quintIn } from 'svelte/easing';
+	import { fade } from 'svelte/transition';
 </script>
 
 <main class="mx-[3rem] mt-8 md:mt-12">
